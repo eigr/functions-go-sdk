@@ -25,7 +25,7 @@
 package eventlogeventing
 
 import (
-	_ "github.com/cloudstateio/go-support/cloudstate"
+	_ "github.com/eigr/permastate-go/cloudstate"
 	proto "github.com/golang/protobuf/proto"
 	any "github.com/golang/protobuf/ptypes/any"
 	empty "github.com/golang/protobuf/ptypes/empty"

@@ -25,7 +25,7 @@
 package crdt
 
 import (
-	_ "github.com/cloudstateio/go-support/cloudstate"
+	_ "github.com/eigr/permastate-go/cloudstate"
 	proto "github.com/golang/protobuf/proto"
 	any "github.com/golang/protobuf/ptypes/any"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"

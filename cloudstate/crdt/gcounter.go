@@ -18,7 +18,7 @@ package crdt
 import (
 	"fmt"
 
-	"github.com/cloudstateio/go-support/cloudstate/entity"
+	"github.com/eigr/permastate-go/cloudstate/entity"
 )
 
 // GCounter, or Grow-only Counter, is a counter that can only be incremented.

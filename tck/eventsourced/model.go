@@ -19,9 +19,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cloudstateio/go-support/cloudstate/encoding"
-	"github.com/cloudstateio/go-support/cloudstate/eventsourced"
-	"github.com/cloudstateio/go-support/cloudstate/protocol"
+	"github.com/eigr/permastate-go/cloudstate/encoding"
+	"github.com/eigr/permastate-go/cloudstate/eventsourced"
+	"github.com/eigr/permastate-go/cloudstate/protocol"
 	"github.com/golang/protobuf/proto"
 )
 

@@ -3,10 +3,10 @@ package main
 import (
 	"log"
 
-	"github.com/cloudstateio/go-support/cloudstate"
-	"github.com/cloudstateio/go-support/cloudstate/crdt"
-	"github.com/cloudstateio/go-support/cloudstate/protocol"
-	"github.com/cloudstateio/go-support/example/crdt_shoppingcart/shoppingcart"
+	"github.com/eigr/permastate-go/cloudstate"
+	"github.com/eigr/permastate-go/cloudstate/crdt"
+	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/permastate-go/example/crdt_shoppingcart/shoppingcart"
 )
 
 // main creates a CloudState instance and registers the ShoppingCart

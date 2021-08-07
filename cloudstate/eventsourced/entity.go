@@ -18,7 +18,7 @@ package eventsourced
 import (
 	"time"
 
-	"github.com/cloudstateio/go-support/cloudstate/protocol"
+	"github.com/eigr/permastate-go/cloudstate/protocol"
 	"github.com/golang/protobuf/proto"
 )
 

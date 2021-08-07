@@ -25,7 +25,7 @@
 package presence
 
 import (
-	_ "github.com/cloudstateio/go-support/cloudstate"
+	_ "github.com/eigr/permastate-go/cloudstate"
 	proto "github.com/golang/protobuf/proto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"

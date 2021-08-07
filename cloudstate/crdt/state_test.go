@@ -19,7 +19,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/cloudstateio/go-support/cloudstate/entity"
+	"github.com/eigr/permastate-go/cloudstate/entity"
 )
 
 func Test_newFor(t *testing.T) {

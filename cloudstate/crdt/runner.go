@@ -19,8 +19,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cloudstateio/go-support/cloudstate/entity"
-	"github.com/cloudstateio/go-support/cloudstate/protocol"
+	"github.com/eigr/permastate-go/cloudstate/entity"
+	"github.com/eigr/permastate-go/cloudstate/protocol"
 )
 
 // runner runs a stream with the help of a context.

@@ -18,7 +18,7 @@ package crdt
 import (
 	"fmt"
 
-	"github.com/cloudstateio/go-support/cloudstate/entity"
+	"github.com/eigr/permastate-go/cloudstate/entity"
 )
 
 // PNCounter, or Positive-Negative Counter, is a counter that can both be incremented

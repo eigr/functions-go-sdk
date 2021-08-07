@@ -18,7 +18,7 @@ package crdt
 import (
 	"fmt"
 
-	"github.com/cloudstateio/go-support/cloudstate/entity"
+	"github.com/eigr/permastate-go/cloudstate/entity"
 	"github.com/golang/protobuf/ptypes/any"
 )
 

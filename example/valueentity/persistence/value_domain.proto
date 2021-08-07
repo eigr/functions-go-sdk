@@ -17,7 +17,7 @@ syntax = "proto3";
 
 package com.example.valueentity.shoppingcart.persistence;
 
-option go_package = "github.com/cloudstateio/go-support/example/valueentity/persistence;persistence";
+option go_package = "github.com/eigr/permastate-go/example/valueentity/persistence;persistence";
 
 message LineItem {
     string productId = 1;

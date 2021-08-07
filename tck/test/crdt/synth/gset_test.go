@@ -22,9 +22,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cloudstateio/go-support/cloudstate/encoding"
-	"github.com/cloudstateio/go-support/cloudstate/entity"
-	"github.com/cloudstateio/go-support/tck/crdt"
+	"github.com/eigr/permastate-go/cloudstate/encoding"
+	"github.com/eigr/permastate-go/cloudstate/entity"
+	"github.com/eigr/permastate-go/tck/crdt"
 )
 
 func TestCRDTGSet(t *testing.T) {

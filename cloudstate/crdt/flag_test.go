@@ -18,7 +18,7 @@ package crdt
 import (
 	"testing"
 
-	"github.com/cloudstateio/go-support/cloudstate/entity"
+	"github.com/eigr/permastate-go/cloudstate/entity"
 )
 
 func TestFlag(t *testing.T) {

@@ -15,7 +15,7 @@
 
 package crdt
 
-import "github.com/cloudstateio/go-support/cloudstate/entity"
+import "github.com/eigr/permastate-go/cloudstate/entity"
 
 type CRDT interface {
 	Delta() *entity.CrdtDelta

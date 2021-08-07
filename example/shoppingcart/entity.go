@@ -19,8 +19,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cloudstateio/go-support/cloudstate/eventsourced"
-	domain "github.com/cloudstateio/go-support/example/shoppingcart/persistence"
+	"github.com/eigr/permastate-go/cloudstate/eventsourced"
+	domain "github.com/eigr/permastate-go/example/shoppingcart/persistence"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/empty"
 )

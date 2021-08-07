@@ -20,8 +20,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/cloudstateio/go-support/cloudstate/encoding"
-	"github.com/cloudstateio/go-support/cloudstate/entity"
+	"github.com/eigr/permastate-go/cloudstate/encoding"
+	"github.com/eigr/permastate-go/cloudstate/entity"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/empty"
 	"google.golang.org/grpc"

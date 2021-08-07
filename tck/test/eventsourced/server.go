@@ -6,10 +6,10 @@ import (
 	"net"
 	"testing"
 
-	"github.com/cloudstateio/go-support/cloudstate"
-	"github.com/cloudstateio/go-support/cloudstate/eventsourced"
-	"github.com/cloudstateio/go-support/cloudstate/protocol"
-	shoppingcart2 "github.com/cloudstateio/go-support/example/shoppingcart"
+	"github.com/eigr/permastate-go/cloudstate"
+	"github.com/eigr/permastate-go/cloudstate/eventsourced"
+	"github.com/eigr/permastate-go/cloudstate/protocol"
+	shoppingcart2 "github.com/eigr/permastate-go/example/shoppingcart"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/test/bufconn"
 )
