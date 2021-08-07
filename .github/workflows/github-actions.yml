@@ -9,10 +9,10 @@ jobs:
     name: Go ${{ matrix.go }}
     steps:
       - uses: actions/checkout@v2
-      - name: Setup go
+      - name: Setup Go
         uses: actions/setup-go@v1
         with:
           go-version: ${{ matrix.go }}
       - run: go get -t -v ./...
-#      - run: go test -v -race ./...
+      - run: go test -v -race ./...
       - run: cd tck && ./run_tck.sh
