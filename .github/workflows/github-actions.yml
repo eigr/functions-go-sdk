@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         go: [ '1.14' ]
-    name: Go ${{ matrix.go }} sample
+    name: Go ${{ matrix.go }}
     steps:
       - uses: actions/checkout@v2
       - name: Setup go
@@ -15,3 +15,4 @@ jobs:
           go-version: ${{ matrix.go }}
       - run: go get -t -v ./...
       - run: go test -v -race ./...
+      - run: cd tck && ./run_tck.sh
