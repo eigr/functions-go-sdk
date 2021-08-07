@@ -26,11 +26,11 @@ jobs:
       name: tck verification
       script:
         - cd tck && ./run_tck.sh
-    - stage: validate_docs
-      script: make -C docs
-    - stage: deploy_docs
-      if: repo = cloudstateio/go-support AND tag =~ ^v
-      script: make -C docs deploy
+#    - stage: validate_docs
+#      script: make -C docs
+#    - stage: deploy_docs
+#      if: repo = cloudstateio/go-support AND tag =~ ^v
+#      script: make -C docs deploy
 #    - stage: deploy devcontainer image
 #      name: deploy devcontainer image to dockerhub
 #      if: branch = master AND type = push
