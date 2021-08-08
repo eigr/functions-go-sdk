@@ -1,10 +1,10 @@
 package shoppingcart
 
 import (
-	"github.com/cloudstateio/go-support/cloudstate/crdt"
-	"github.com/cloudstateio/go-support/cloudstate/encoding"
-	"github.com/cloudstateio/go-support/cloudstate/protocol"
-	"github.com/cloudstateio/go-support/example/crdt_shoppingcart/shoppingcart"
+	"github.com/eigr/permastate-go/cloudstate/crdt"
+	"github.com/eigr/permastate-go/cloudstate/encoding"
+	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/permastate-go/example/crdt_shoppingcart/shoppingcart"
 )
 
 type ShoppingCart struct {

@@ -1,5 +1,6 @@
 //
 // Copyright 2019 Lightbend Inc.
+// Copyright 2021 The eigr.io Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,8 +24,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cloudstateio/go-support/cloudstate/protocol"
-	"github.com/cloudstateio/go-support/example/crdt_shoppingcart/shoppingcart"
+	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/permastate-go/example/crdt_shoppingcart/shoppingcart"
 )
 
 // TestCRDT runs the TCK for the CRDT state model.

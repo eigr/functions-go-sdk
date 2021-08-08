@@ -1,5 +1,6 @@
 //
 // Copyright 2019 Lightbend Inc.
+// Copyright 2021 The eigr.io Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,10 +20,10 @@ package main
 import (
 	"log"
 
-	"github.com/cloudstateio/go-support/cloudstate"
-	"github.com/cloudstateio/go-support/cloudstate/eventsourced"
-	"github.com/cloudstateio/go-support/cloudstate/protocol"
-	"github.com/cloudstateio/go-support/example/shoppingcart"
+	"github.com/eigr/permastate-go/cloudstate"
+	"github.com/eigr/permastate-go/cloudstate/eventsourced"
+	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/permastate-go/example/shoppingcart"
 )
 
 // main creates a CloudState instance and registers the ShoppingCart

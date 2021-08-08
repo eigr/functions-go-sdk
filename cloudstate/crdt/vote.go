@@ -1,5 +1,6 @@
 //
 // Copyright 2019 Lightbend Inc.
+// Copyright 2021 The eigr.io Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,7 +19,7 @@ package crdt
 import (
 	"fmt"
 
-	"github.com/cloudstateio/go-support/cloudstate/entity"
+	"github.com/eigr/permastate-go/cloudstate/entity"
 )
 
 // A Vote is a CRDT which allows nodes to vote on a condition. It’s similar

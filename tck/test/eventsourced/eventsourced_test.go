@@ -1,5 +1,6 @@
 //
 // Copyright 2019 Lightbend Inc.
+// Copyright 2021 The eigr.io Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,11 +23,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cloudstateio/go-support/cloudstate/encoding"
-	"github.com/cloudstateio/go-support/cloudstate/entity"
-	"github.com/cloudstateio/go-support/cloudstate/protocol"
-	"github.com/cloudstateio/go-support/example/shoppingcart"
-	domain "github.com/cloudstateio/go-support/example/shoppingcart/persistence"
+	"github.com/eigr/permastate-go/cloudstate/encoding"
+	"github.com/eigr/permastate-go/cloudstate/entity"
+	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/permastate-go/example/shoppingcart"
+	domain "github.com/eigr/permastate-go/example/shoppingcart/persistence"
 )
 
 const serviceName = "com.example.shoppingcart.ShoppingCart"

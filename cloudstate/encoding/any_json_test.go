@@ -1,5 +1,6 @@
 //
 // Copyright 2019 Lightbend Inc.
+// Copyright 2021 The eigr.io Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +29,7 @@ func TestMarshalling(t *testing.T) {
 		if err != nil {
 			t.Fail()
 		}
-		url := "json.cloudstate.io/github.com/cloudstateio/go-support/cloudstate/encoding.a"
+		url := "json.cloudstate.io/github.com/eigr/permastate-go/cloudstate/encoding.a"
 		if x.GetTypeUrl() != url {
 			t.Fail()
 		}

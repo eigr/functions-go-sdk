@@ -25,7 +25,7 @@ package cloudstate.samples.chat.presence;
 option java_package = "io.cloudstate.samples.chat.presence";
 option java_outer_classname = "PresenceProtos";
 
-option go_package = "github.com/cloudstateio/go-support/example/chat/presence;presence";
+option go_package = "github.com/eigr/permastate-go/example/chat/presence;presence";
 
 message User {
     string name = 1 [(.cloudstate.entity_key) = true];

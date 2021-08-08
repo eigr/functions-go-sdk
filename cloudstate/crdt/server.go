@@ -1,7 +1,6 @@
 //
 // Copyright 2019 Lightbend Inc.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
+// Copyright 2021 The eigr.io Authors.// Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
@@ -22,7 +21,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/cloudstateio/go-support/cloudstate/entity"
+	"github.com/eigr/permastate-go/cloudstate/entity"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

@@ -5,7 +5,7 @@ function rnd() {
   cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1
 }
 
-FUNC_IMAGE=${1:-cloudstateio/cloudstate-go-tck:latest}
+FUNC_IMAGE=${1:-gcr.io/eigr-io/eigr-go-tck:latest}
 FUNC="cloudstate-function-$(rnd)"
 PROXY_IMAGE=${2:-cloudstateio/cloudstate-proxy-core:latest}
 PROXY="cloudstate-proxy-$(rnd)"
@@ -18,6 +18,9 @@ finally() {
 }
 trap finally EXIT
 set -x
+
+docker pull "$PROXY_IMAGE"
+docker pull "$TCK_IMAGE"
 
 # run the function and the proxy
 docker run -d --name "$FUNC" --net=host "${FUNC_IMAGE}" || exit $?

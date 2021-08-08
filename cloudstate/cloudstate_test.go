@@ -1,5 +1,6 @@
 //
 // Copyright 2019 Lightbend Inc.
+// Copyright 2021 The eigr.io Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,8 +25,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cloudstateio/go-support/cloudstate/discovery"
-	"github.com/cloudstateio/go-support/cloudstate/protocol"
+	"github.com/eigr/permastate-go/cloudstate/discovery"
+	"github.com/eigr/permastate-go/cloudstate/protocol"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 )
 

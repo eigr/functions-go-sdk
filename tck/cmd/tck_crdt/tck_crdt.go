@@ -1,5 +1,6 @@
 //
 // Copyright 2019 Lightbend Inc.
+// Copyright 2021 The eigr.io Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,10 +19,10 @@ package main
 import (
 	"log"
 
-	"github.com/cloudstateio/go-support/cloudstate"
-	"github.com/cloudstateio/go-support/cloudstate/crdt"
-	"github.com/cloudstateio/go-support/cloudstate/protocol"
-	tck "github.com/cloudstateio/go-support/tck/crdt"
+	"github.com/eigr/permastate-go/cloudstate"
+	"github.com/eigr/permastate-go/cloudstate/crdt"
+	"github.com/eigr/permastate-go/cloudstate/protocol"
+	tck "github.com/eigr/permastate-go/tck/crdt"
 )
 
 func main() {

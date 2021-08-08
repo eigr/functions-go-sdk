@@ -1,5 +1,6 @@
 //
 // Copyright 2019 Lightbend Inc.
+// Copyright 2021 The eigr.io Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,11 +25,11 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/cloudstateio/go-support/cloudstate/action"
-	"github.com/cloudstateio/go-support/cloudstate/crdt"
-	"github.com/cloudstateio/go-support/cloudstate/eventsourced"
-	"github.com/cloudstateio/go-support/cloudstate/protocol"
-	"github.com/cloudstateio/go-support/cloudstate/value"
+	"github.com/eigr/permastate-go/cloudstate/action"
+	"github.com/eigr/permastate-go/cloudstate/crdt"
+	"github.com/eigr/permastate-go/cloudstate/eventsourced"
+	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/permastate-go/cloudstate/value"
 	"github.com/golang/protobuf/descriptor"
 	"github.com/golang/protobuf/proto"
 	filedescr "github.com/golang/protobuf/protoc-gen-go/descriptor"

@@ -6,7 +6,7 @@ import "cloudstate/entity_key.proto";
 package example.shoppingcart;
 
 option java_package = "com.example";
-option go_package = "github.com/cloudstateio/go-support/example/crdt_shoppingcart/shoppingcart;shoppingcart";
+option go_package = "github.com/eigr/permastate-go/example/crdt_shoppingcart/shoppingcart;shoppingcart";
 
 service ShoppingCartService {
     rpc AddItem (AddLineItem) returns (google.protobuf.Empty);

@@ -32,7 +32,7 @@ import path::
 +
 [source,go]
 ----
-import "github.com/cloudstateio/go-support/cloudstate"
+import "github.com/eigr/permastate-go/cloudstate"
 ----
 
 go.mod::
