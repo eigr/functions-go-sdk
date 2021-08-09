@@ -13,8 +13,8 @@ jobs:
         uses: actions/setup-go@v1
         with:
           go-version: ${{ matrix.go }}
-      - run: docker run hello-world
-      - run: ./tck/run_tck.sh
+#      - run: docker run hello-world
+      - run: cd tck && docker-compose up --exit-code-from tck --abort-on-container-exit
 #      - run: go get -t -v ./...
 #      - run: go test -v -race ./...
 #      - run: cd tck && ./run_tck.sh
