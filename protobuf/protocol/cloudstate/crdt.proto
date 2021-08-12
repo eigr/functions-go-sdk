@@ -15,7 +15,7 @@ import "google/protobuf/any.proto";
 import "cloudstate/entity.proto";
 
 option java_package = "io.cloudstate.protocol";
-option go_package = "github.com/eigr/permastate-go/cloudstate/entity;entity";
+option go_package = "github.com/eigr/functions-go-sdk/cloudstate/entity;entity";
 
 // CRDT Protocol
 //

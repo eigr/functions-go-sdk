@@ -31,7 +31,7 @@ import "google/api/httpbody.proto";
 
 package com.example.valueentity.shoppingcart;
 
-option go_package = "github.com/eigr/permastate-go/example/valueentity;valueentity";
+option go_package = "github.com/eigr/functions-go-sdk/example/valueentity;valueentity";
 
 message AddLineItem {
     string user_id = 1 [(.cloudstate.entity_key) = true];

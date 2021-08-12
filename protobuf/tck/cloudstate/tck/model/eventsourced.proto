@@ -15,7 +15,7 @@ import "cloudstate/entity_key.proto";
 import "google/api/annotations.proto";
 
 option java_package = "io.cloudstate.tck.model";
-option go_package = "github.com/eigr/permastate-go/tck/eventsourced;eventsourced";
+option go_package = "github.com/eigr/functions-go-sdk/tck/eventsourced;eventsourced";
 
 //
 // The `EventSourcedTckModel` service should be implemented in the following ways:

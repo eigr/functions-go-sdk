@@ -17,7 +17,7 @@
 package synth
 
 import (
-	"github.com/eigr/permastate-go/tck/crdt"
+	"github.com/eigr/functions-go-sdk/tck/crdt"
 	"github.com/golang/protobuf/proto"
 )
 

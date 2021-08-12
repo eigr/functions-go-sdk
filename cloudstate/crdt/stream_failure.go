@@ -17,8 +17,8 @@
 package crdt
 
 import (
-	"github.com/eigr/permastate-go/cloudstate/entity"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/cloudstate/entity"
+	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
 )
 
 func sendFailure(e error, stream entity.Crdt_HandleServer) error {

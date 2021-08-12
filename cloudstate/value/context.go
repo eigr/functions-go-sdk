@@ -22,8 +22,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/eigr/permastate-go/cloudstate/entity"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/cloudstate/entity"
+	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/any"
 )

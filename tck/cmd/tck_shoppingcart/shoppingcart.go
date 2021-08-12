@@ -20,10 +20,10 @@ package main
 import (
 	"log"
 
-	"github.com/eigr/permastate-go/cloudstate"
-	"github.com/eigr/permastate-go/cloudstate/eventsourced"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
-	"github.com/eigr/permastate-go/example/shoppingcart"
+	"github.com/eigr/functions-go-sdk/cloudstate"
+	"github.com/eigr/functions-go-sdk/cloudstate/eventsourced"
+	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/example/shoppingcart"
 )
 
 // main creates a CloudState instance and registers the ShoppingCart

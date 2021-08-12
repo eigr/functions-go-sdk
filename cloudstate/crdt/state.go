@@ -19,7 +19,7 @@ package crdt
 import (
 	"fmt"
 
-	"github.com/eigr/permastate-go/cloudstate/entity"
+	"github.com/eigr/functions-go-sdk/cloudstate/entity"
 )
 
 func newFor(delta *entity.CrdtDelta) (CRDT, error) {

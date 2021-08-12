@@ -22,10 +22,10 @@ import (
 	"net"
 	"testing"
 
-	"github.com/eigr/permastate-go/cloudstate"
-	"github.com/eigr/permastate-go/cloudstate/crdt"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
-	crdt2 "github.com/eigr/permastate-go/tck/crdt"
+	"github.com/eigr/functions-go-sdk/cloudstate"
+	"github.com/eigr/functions-go-sdk/cloudstate/crdt"
+	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
+	crdt2 "github.com/eigr/functions-go-sdk/tck/crdt"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/test/bufconn"
 )

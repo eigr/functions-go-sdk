@@ -22,8 +22,8 @@ import (
 	"io"
 	"sync"
 
-	"github.com/eigr/permastate-go/cloudstate/entity"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/cloudstate/entity"
+	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
 )
 
 type (

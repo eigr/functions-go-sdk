@@ -19,7 +19,7 @@ package crdt
 import (
 	"fmt"
 
-	"github.com/eigr/permastate-go/cloudstate/entity"
+	"github.com/eigr/functions-go-sdk/cloudstate/entity"
 )
 
 // A Flag is a boolean value that starts as false, and can be set to true.

@@ -3,9 +3,9 @@ package valueentity
 import (
 	"errors"
 
-	"github.com/eigr/permastate-go/cloudstate/encoding"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
-	"github.com/eigr/permastate-go/cloudstate/value"
+	"github.com/eigr/functions-go-sdk/cloudstate/encoding"
+	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/cloudstate/value"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/any"
 )

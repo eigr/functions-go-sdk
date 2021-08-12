@@ -16,7 +16,7 @@
 
 package crdt
 
-import "github.com/eigr/permastate-go/cloudstate/entity"
+import "github.com/eigr/functions-go-sdk/cloudstate/entity"
 
 type Clock uint64
 

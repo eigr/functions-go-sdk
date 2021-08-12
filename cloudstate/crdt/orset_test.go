@@ -19,8 +19,8 @@ package crdt
 import (
 	"testing"
 
-	"github.com/eigr/permastate-go/cloudstate/encoding"
-	"github.com/eigr/permastate-go/cloudstate/entity"
+	"github.com/eigr/functions-go-sdk/cloudstate/encoding"
+	"github.com/eigr/functions-go-sdk/cloudstate/entity"
 	"github.com/golang/protobuf/ptypes/any"
 )
 

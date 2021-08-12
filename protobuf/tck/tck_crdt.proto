@@ -15,7 +15,7 @@ import "cloudstate/entity_key.proto";
 package crdt;
 
 option java_package = "io.cloudstate.tck.model";
-option go_package = "github.com/eigr/permastate-go/tck/proto/crdt;crdt";
+option go_package = "github.com/eigr/functions-go-sdk/tck/proto/crdt;crdt";
 
 service TckCrdt {
     rpc ProcessGCounter (GCounterRequest) returns (GCounterResponse);

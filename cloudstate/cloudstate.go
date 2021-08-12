@@ -12,13 +12,13 @@ import (
 	"net"
 	"os"
 
-	"github.com/eigr/permastate-go/cloudstate/action"
-	"github.com/eigr/permastate-go/cloudstate/crdt"
-	"github.com/eigr/permastate-go/cloudstate/discovery"
-	"github.com/eigr/permastate-go/cloudstate/entity"
-	"github.com/eigr/permastate-go/cloudstate/eventsourced"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
-	"github.com/eigr/permastate-go/cloudstate/value"
+	"github.com/eigr/functions-go-sdk/cloudstate/action"
+	"github.com/eigr/functions-go-sdk/cloudstate/crdt"
+	"github.com/eigr/functions-go-sdk/cloudstate/discovery"
+	"github.com/eigr/functions-go-sdk/cloudstate/entity"
+	"github.com/eigr/functions-go-sdk/cloudstate/eventsourced"
+	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/cloudstate/value"
 	"google.golang.org/grpc"
 )
 

@@ -20,8 +20,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/eigr/permastate-go/cloudstate/entity"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/cloudstate/entity"
+	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
 )
 
 // sendProtocolFailure sends a given error to the proxy. If the error is a protocol.ServerError a corresponding

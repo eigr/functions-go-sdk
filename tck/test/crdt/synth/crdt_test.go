@@ -24,8 +24,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/eigr/permastate-go/cloudstate/protocol"
-	"github.com/eigr/permastate-go/example/crdt_shoppingcart/shoppingcart"
+	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/example/crdt_shoppingcart/shoppingcart"
 )
 
 // TestCRDT runs the TCK for the CRDT state model.

@@ -19,10 +19,10 @@ package main
 import (
 	"log"
 
-	"github.com/eigr/permastate-go/cloudstate"
-	"github.com/eigr/permastate-go/cloudstate/crdt"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
-	tck "github.com/eigr/permastate-go/tck/crdt"
+	"github.com/eigr/functions-go-sdk/cloudstate"
+	"github.com/eigr/functions-go-sdk/cloudstate/crdt"
+	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
+	tck "github.com/eigr/functions-go-sdk/tck/crdt"
 )
 
 func main() {

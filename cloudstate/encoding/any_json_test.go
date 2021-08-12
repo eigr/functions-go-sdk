@@ -29,7 +29,7 @@ func TestMarshalling(t *testing.T) {
 		if err != nil {
 			t.Fail()
 		}
-		url := "json.cloudstate.io/github.com/eigr/permastate-go/cloudstate/encoding.a"
+		url := "json.cloudstate.io/github.com/eigr/functions-go-sdk/cloudstate/encoding.a"
 		if x.GetTypeUrl() != url {
 			t.Fail()
 		}

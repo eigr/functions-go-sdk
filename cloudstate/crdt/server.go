@@ -21,7 +21,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/eigr/permastate-go/cloudstate/entity"
+	"github.com/eigr/functions-go-sdk/cloudstate/entity"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

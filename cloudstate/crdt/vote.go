@@ -19,7 +19,7 @@ package crdt
 import (
 	"fmt"
 
-	"github.com/eigr/permastate-go/cloudstate/entity"
+	"github.com/eigr/functions-go-sdk/cloudstate/entity"
 )
 
 // A Vote is a CRDT which allows nodes to vote on a condition. It’s similar

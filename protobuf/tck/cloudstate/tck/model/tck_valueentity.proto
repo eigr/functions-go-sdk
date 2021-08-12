@@ -15,7 +15,7 @@ import "cloudstate/entity_key.proto";
 import "google/api/annotations.proto";
 
 option java_package = "io.cloudstate.tck.model.valueentity";
-option go_package = "github.com/eigr/permastate-go/tck/valueentity;valueentity";
+option go_package = "github.com/eigr/functions-go-sdk/tck/valueentity;valueentity";
 
 //
 // The `ValueEntityTckModel` service should be implemented in the following ways:

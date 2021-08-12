@@ -21,8 +21,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/eigr/permastate-go/cloudstate/entity"
-	"github.com/eigr/permastate-go/tck/crdt"
+	"github.com/eigr/functions-go-sdk/cloudstate/entity"
+	"github.com/eigr/functions-go-sdk/tck/crdt"
 )
 
 func TestCRDTPNCounter(t *testing.T) {

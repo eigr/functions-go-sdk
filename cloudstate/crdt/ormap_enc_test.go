@@ -3,7 +3,7 @@ package crdt
 import (
 	"testing"
 
-	"github.com/eigr/permastate-go/cloudstate/encoding"
+	"github.com/eigr/functions-go-sdk/cloudstate/encoding"
 )
 
 func BenchmarkORMapEncoding(b *testing.B) {

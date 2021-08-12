@@ -19,9 +19,9 @@ package action
 import (
 	"errors"
 
-	"github.com/eigr/permastate-go/cloudstate/action"
-	"github.com/eigr/permastate-go/cloudstate/encoding"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/cloudstate/action"
+	"github.com/eigr/functions-go-sdk/cloudstate/encoding"
+	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
 	"github.com/golang/protobuf/proto"
 )
 
