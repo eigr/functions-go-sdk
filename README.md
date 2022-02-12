@@ -1,4 +1,4 @@
-# eigr/permastate support for Go
+# Eigr Function SDK for Go
 
 [![GitHub Actions](https://github.com/eigr/permastate-go/actions/workflows/github-actions.yml/badge.svg)](https://github.com/eigr/permastate-go/actions/workflows/github-actions.yml)
 
