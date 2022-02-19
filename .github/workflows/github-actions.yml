@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        go: [ '1.14', '1.15', '1.16' ]
+        go: [ '1.16' , '1.17' ]
     name: Go ${{ matrix.go }}
     steps:
       - uses: actions/checkout@v2
@@ -15,4 +15,4 @@ jobs:
           go-version: ${{ matrix.go }}
       - run: go get -t -v ./...
       - run: go test -v -race ./...
-      - run: cd tck && docker-compose up --exit-code-from tck --abort-on-container-exit
+      #- run: cd tck && docker-compose up --exit-code-from tck --abort-on-container-exit
