@@ -19,13 +19,13 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/eigr/functions-go-sdk/cloudstate/eventsourced"
 	domain "github.com/eigr/functions-go-sdk/example/shoppingcart/persistence"
+	"github.com/eigr/functions-go-sdk/functions/eventsourced"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/empty"
 )
 
-// A Cloudstate event sourced entity implementing a shopping cart.
+// An Eigr Functions event sourced entity implementing a shopping cart.
 // tag::entity-type[]
 // tag::entity-state[]
 type ShoppingCart struct {

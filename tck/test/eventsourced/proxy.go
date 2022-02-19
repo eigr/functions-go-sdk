@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/eigr/functions-go-sdk/cloudstate/encoding"
-	"github.com/eigr/functions-go-sdk/cloudstate/entity"
-	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/functions/encoding"
+	"github.com/eigr/functions-go-sdk/functions/entity"
+	"github.com/eigr/functions-go-sdk/functions/protocol"
 	"github.com/golang/protobuf/proto"
 )
 

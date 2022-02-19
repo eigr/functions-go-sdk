@@ -25,7 +25,7 @@
 package friends
 
 import (
-	_ "github.com/eigr/functions-go-sdk/cloudstate"
+	_ "github.com/eigr/functions-go-sdk/functions"
 	proto "github.com/golang/protobuf/proto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
@@ -352,21 +352,21 @@ func file_friends_proto_rawDescGZIP() []byte {
 
 var file_friends_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_friends_proto_goTypes = []interface{}{
-	(*Friend)(nil),        // 0: cloudstate.samples.chat.friends.Friend
-	(*FriendRequest)(nil), // 1: cloudstate.samples.chat.friends.FriendRequest
-	(*User)(nil),          // 2: cloudstate.samples.chat.friends.User
-	(*FriendsList)(nil),   // 3: cloudstate.samples.chat.friends.FriendsList
-	(*Empty)(nil),         // 4: cloudstate.samples.chat.friends.Empty
+	(*Friend)(nil),        // 0: functions.samples.chat.friends.Friend
+	(*FriendRequest)(nil), // 1: functions.samples.chat.friends.FriendRequest
+	(*User)(nil),          // 2: functions.samples.chat.friends.User
+	(*FriendsList)(nil),   // 3: functions.samples.chat.friends.FriendsList
+	(*Empty)(nil),         // 4: functions.samples.chat.friends.Empty
 }
 var file_friends_proto_depIdxs = []int32{
-	0, // 0: cloudstate.samples.chat.friends.FriendRequest.friend:type_name -> cloudstate.samples.chat.friends.Friend
-	0, // 1: cloudstate.samples.chat.friends.FriendsList.friends:type_name -> cloudstate.samples.chat.friends.Friend
-	1, // 2: cloudstate.samples.chat.friends.Friends.Add:input_type -> cloudstate.samples.chat.friends.FriendRequest
-	1, // 3: cloudstate.samples.chat.friends.Friends.Remove:input_type -> cloudstate.samples.chat.friends.FriendRequest
-	2, // 4: cloudstate.samples.chat.friends.Friends.GetFriends:input_type -> cloudstate.samples.chat.friends.User
-	4, // 5: cloudstate.samples.chat.friends.Friends.Add:output_type -> cloudstate.samples.chat.friends.Empty
-	4, // 6: cloudstate.samples.chat.friends.Friends.Remove:output_type -> cloudstate.samples.chat.friends.Empty
-	3, // 7: cloudstate.samples.chat.friends.Friends.GetFriends:output_type -> cloudstate.samples.chat.friends.FriendsList
+	0, // 0: functions.samples.chat.friends.FriendRequest.friend:type_name -> functions.samples.chat.friends.Friend
+	0, // 1: functions.samples.chat.friends.FriendsList.friends:type_name -> functions.samples.chat.friends.Friend
+	1, // 2: functions.samples.chat.friends.Friends.Add:input_type -> functions.samples.chat.friends.FriendRequest
+	1, // 3: functions.samples.chat.friends.Friends.Remove:input_type -> functions.samples.chat.friends.FriendRequest
+	2, // 4: functions.samples.chat.friends.Friends.GetFriends:input_type -> functions.samples.chat.friends.User
+	4, // 5: functions.samples.chat.friends.Friends.Add:output_type -> functions.samples.chat.friends.Empty
+	4, // 6: functions.samples.chat.friends.Friends.Remove:output_type -> functions.samples.chat.friends.Empty
+	3, // 7: functions.samples.chat.friends.Friends.GetFriends:output_type -> functions.samples.chat.friends.FriendsList
 	5, // [5:8] is the sub-list for method output_type
 	2, // [2:5] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name

@@ -12,10 +12,10 @@ package cloudstate.action;
 // Any is used so that domain events defined according to the action's business domain can be embedded inside
 // the protocol.
 import "google/protobuf/any.proto";
-import "cloudstate/entity.proto";
+import "functions/entity.proto";
 
-option java_package = "io.cloudstate.protocol";
-option go_package = "github.com/eigr/functions-go-sdk/cloudstate/entity;entity";
+option java_package = "io.functions.protocol";
+option go_package = "github.com/eigr/functions-go-sdk/functions/entity;entity";
 
 // An action command.
 //

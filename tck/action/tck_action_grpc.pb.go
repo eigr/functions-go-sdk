@@ -33,7 +33,7 @@ func NewActionTckModelClient(cc grpc.ClientConnInterface) ActionTckModelClient {
 
 func (c *actionTckModelClient) ProcessUnary(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.action.ActionTckModel/ProcessUnary", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.action.ActionTckModel/ProcessUnary", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -41,7 +41,7 @@ func (c *actionTckModelClient) ProcessUnary(ctx context.Context, in *Request, op
 }
 
 func (c *actionTckModelClient) ProcessStreamedIn(ctx context.Context, opts ...grpc.CallOption) (ActionTckModel_ProcessStreamedInClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_ActionTckModel_serviceDesc.Streams[0], "/cloudstate.tck.model.action.ActionTckModel/ProcessStreamedIn", opts...)
+	stream, err := c.cc.NewStream(ctx, &_ActionTckModel_serviceDesc.Streams[0], "/functions.tck.model.action.ActionTckModel/ProcessStreamedIn", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -75,7 +75,7 @@ func (x *actionTckModelProcessStreamedInClient) CloseAndRecv() (*Response, error
 }
 
 func (c *actionTckModelClient) ProcessStreamedOut(ctx context.Context, in *Request, opts ...grpc.CallOption) (ActionTckModel_ProcessStreamedOutClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_ActionTckModel_serviceDesc.Streams[1], "/cloudstate.tck.model.action.ActionTckModel/ProcessStreamedOut", opts...)
+	stream, err := c.cc.NewStream(ctx, &_ActionTckModel_serviceDesc.Streams[1], "/functions.tck.model.action.ActionTckModel/ProcessStreamedOut", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -107,7 +107,7 @@ func (x *actionTckModelProcessStreamedOutClient) Recv() (*Response, error) {
 }
 
 func (c *actionTckModelClient) ProcessStreamed(ctx context.Context, opts ...grpc.CallOption) (ActionTckModel_ProcessStreamedClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_ActionTckModel_serviceDesc.Streams[2], "/cloudstate.tck.model.action.ActionTckModel/ProcessStreamed", opts...)
+	stream, err := c.cc.NewStream(ctx, &_ActionTckModel_serviceDesc.Streams[2], "/functions.tck.model.action.ActionTckModel/ProcessStreamed", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -187,7 +187,7 @@ func _ActionTckModel_ProcessUnary_Handler(srv interface{}, ctx context.Context, 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.action.ActionTckModel/ProcessUnary",
+		FullMethod: "/functions.tck.model.action.ActionTckModel/ProcessUnary",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ActionTckModelServer).ProcessUnary(ctx, req.(*Request))
@@ -269,7 +269,7 @@ func (x *actionTckModelProcessStreamedServer) Recv() (*Request, error) {
 }
 
 var _ActionTckModel_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.action.ActionTckModel",
+	ServiceName: "functions.tck.model.action.ActionTckModel",
 	HandlerType: (*ActionTckModelServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -315,7 +315,7 @@ func NewActionTwoClient(cc grpc.ClientConnInterface) ActionTwoClient {
 
 func (c *actionTwoClient) Call(ctx context.Context, in *OtherRequest, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.action.ActionTwo/Call", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.action.ActionTwo/Call", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -360,7 +360,7 @@ func _ActionTwo_Call_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.action.ActionTwo/Call",
+		FullMethod: "/functions.tck.model.action.ActionTwo/Call",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ActionTwoServer).Call(ctx, req.(*OtherRequest))
@@ -369,7 +369,7 @@ func _ActionTwo_Call_Handler(srv interface{}, ctx context.Context, dec func(inte
 }
 
 var _ActionTwo_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.action.ActionTwo",
+	ServiceName: "functions.tck.model.action.ActionTwo",
 	HandlerType: (*ActionTwoServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -22,10 +22,10 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/eigr/functions-go-sdk/cloudstate/crdt"
-	"github.com/eigr/functions-go-sdk/cloudstate/encoding"
-	"github.com/eigr/functions-go-sdk/cloudstate/entity"
-	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/functions/crdt"
+	"github.com/eigr/functions-go-sdk/functions/encoding"
+	"github.com/eigr/functions-go-sdk/functions/entity"
+	"github.com/eigr/functions-go-sdk/functions/protocol"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/any"
 )
@@ -65,7 +65,7 @@ func (e *CrdtTckModelEntity) processStreamed(ctx *crdt.CommandContext, name stri
 					return nil, err
 				}
 				c.SideEffect(&protocol.SideEffect{
-					ServiceName: "cloudstate.tck.model.crdt.CrdtTwo",
+					ServiceName: "functions.tck.model.crdt.CrdtTwo",
 					CommandName: "Call",
 					Payload:     req,
 					Synchronous: effect.GetSynchronous(),
@@ -149,7 +149,7 @@ func (e *CrdtTckModelEntity) HandleCommand(ctx *crdt.CommandContext, name string
 				return nil, err
 			}
 			ctx.Forward(&protocol.Forward{
-				ServiceName: "cloudstate.tck.model.crdt.CrdtTwo",
+				ServiceName: "functions.tck.model.crdt.CrdtTwo",
 				CommandName: "Call",
 				Payload:     r,
 			})
@@ -162,7 +162,7 @@ func (e *CrdtTckModelEntity) HandleCommand(ctx *crdt.CommandContext, name string
 				return nil, err
 			}
 			ctx.SideEffect(&protocol.SideEffect{
-				ServiceName: "cloudstate.tck.model.crdt.CrdtTwo",
+				ServiceName: "functions.tck.model.crdt.CrdtTwo",
 				CommandName: "Call",
 				Payload:     r,
 				Synchronous: a.Effect.GetSynchronous(),

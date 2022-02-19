@@ -5,16 +5,16 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/eigr/functions-go-sdk/cloudstate/encoding"
-	"github.com/eigr/functions-go-sdk/cloudstate/protocol"
-	"github.com/eigr/functions-go-sdk/cloudstate/value"
 	domain "github.com/eigr/functions-go-sdk/example/valueentity/persistence"
+	"github.com/eigr/functions-go-sdk/functions/encoding"
+	"github.com/eigr/functions-go-sdk/functions/protocol"
+	"github.com/eigr/functions-go-sdk/functions/value"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/any"
 	"github.com/golang/protobuf/ptypes/empty"
 )
 
-// A Cloudstate event sourced entity implementing a shopping cart.
+// An Eigr Functions event sourced entity implementing a shopping cart.
 type ShoppingCart struct {
 	// our domain object
 	cart []*domain.LineItem

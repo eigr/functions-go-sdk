@@ -16,7 +16,7 @@
 package valueentity
 
 import (
-	_ "github.com/eigr/functions-go-sdk/cloudstate"
+	_ "github.com/eigr/functions-go-sdk/functions"
 	proto "github.com/golang/protobuf/proto"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -318,7 +318,7 @@ func (*Delete) Descriptor() ([]byte, []int) {
 }
 
 //
-// Replace the response with a forward to `cloudstate.tck.model.valueentity.ValueEntityTwo/Call`.
+// Replace the response with a forward to `functions.tck.model.valueentity.ValueEntityTwo/Call`.
 // The payload must be a `Request` message with the given `id`.
 //
 type Forward struct {
@@ -369,7 +369,7 @@ func (x *Forward) GetId() string {
 }
 
 //
-// Add a side effect to the reply, to `cloudstate.tck.model.valueentity.ValueEntityTwo/Call`.
+// Add a side effect to the reply, to `functions.tck.model.valueentity.ValueEntityTwo/Call`.
 // The payload must be a `Request` message with the given `id`.
 // The side effect should be marked synchronous based on the given `synchronous` value.
 //
@@ -680,29 +680,29 @@ func file_tck_valueentity_proto_rawDescGZIP() []byte {
 
 var file_tck_valueentity_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_tck_valueentity_proto_goTypes = []interface{}{
-	(*Request)(nil),       // 0: cloudstate.tck.model.valueentity.Request
-	(*RequestAction)(nil), // 1: cloudstate.tck.model.valueentity.RequestAction
-	(*Update)(nil),        // 2: cloudstate.tck.model.valueentity.Update
-	(*Delete)(nil),        // 3: cloudstate.tck.model.valueentity.Delete
-	(*Forward)(nil),       // 4: cloudstate.tck.model.valueentity.Forward
-	(*Effect)(nil),        // 5: cloudstate.tck.model.valueentity.Effect
-	(*Fail)(nil),          // 6: cloudstate.tck.model.valueentity.Fail
-	(*Response)(nil),      // 7: cloudstate.tck.model.valueentity.Response
-	(*Persisted)(nil),     // 8: cloudstate.tck.model.valueentity.Persisted
+	(*Request)(nil),       // 0: functions.tck.model.valueentity.Request
+	(*RequestAction)(nil), // 1: functions.tck.model.valueentity.RequestAction
+	(*Update)(nil),        // 2: functions.tck.model.valueentity.Update
+	(*Delete)(nil),        // 3: functions.tck.model.valueentity.Delete
+	(*Forward)(nil),       // 4: functions.tck.model.valueentity.Forward
+	(*Effect)(nil),        // 5: functions.tck.model.valueentity.Effect
+	(*Fail)(nil),          // 6: functions.tck.model.valueentity.Fail
+	(*Response)(nil),      // 7: functions.tck.model.valueentity.Response
+	(*Persisted)(nil),     // 8: functions.tck.model.valueentity.Persisted
 }
 var file_tck_valueentity_proto_depIdxs = []int32{
-	1, // 0: cloudstate.tck.model.valueentity.Request.actions:type_name -> cloudstate.tck.model.valueentity.RequestAction
-	2, // 1: cloudstate.tck.model.valueentity.RequestAction.update:type_name -> cloudstate.tck.model.valueentity.Update
-	3, // 2: cloudstate.tck.model.valueentity.RequestAction.delete:type_name -> cloudstate.tck.model.valueentity.Delete
-	4, // 3: cloudstate.tck.model.valueentity.RequestAction.forward:type_name -> cloudstate.tck.model.valueentity.Forward
-	5, // 4: cloudstate.tck.model.valueentity.RequestAction.effect:type_name -> cloudstate.tck.model.valueentity.Effect
-	6, // 5: cloudstate.tck.model.valueentity.RequestAction.fail:type_name -> cloudstate.tck.model.valueentity.Fail
-	0, // 6: cloudstate.tck.model.valueentity.ValueEntityTckModel.Process:input_type -> cloudstate.tck.model.valueentity.Request
-	0, // 7: cloudstate.tck.model.valueentity.ValueEntityTwo.Call:input_type -> cloudstate.tck.model.valueentity.Request
-	0, // 8: cloudstate.tck.model.valueentity.ValueEntityConfigured.Call:input_type -> cloudstate.tck.model.valueentity.Request
-	7, // 9: cloudstate.tck.model.valueentity.ValueEntityTckModel.Process:output_type -> cloudstate.tck.model.valueentity.Response
-	7, // 10: cloudstate.tck.model.valueentity.ValueEntityTwo.Call:output_type -> cloudstate.tck.model.valueentity.Response
-	7, // 11: cloudstate.tck.model.valueentity.ValueEntityConfigured.Call:output_type -> cloudstate.tck.model.valueentity.Response
+	1, // 0: functions.tck.model.valueentity.Request.actions:type_name -> functions.tck.model.valueentity.RequestAction
+	2, // 1: functions.tck.model.valueentity.RequestAction.update:type_name -> functions.tck.model.valueentity.Update
+	3, // 2: functions.tck.model.valueentity.RequestAction.delete:type_name -> functions.tck.model.valueentity.Delete
+	4, // 3: functions.tck.model.valueentity.RequestAction.forward:type_name -> functions.tck.model.valueentity.Forward
+	5, // 4: functions.tck.model.valueentity.RequestAction.effect:type_name -> functions.tck.model.valueentity.Effect
+	6, // 5: functions.tck.model.valueentity.RequestAction.fail:type_name -> functions.tck.model.valueentity.Fail
+	0, // 6: functions.tck.model.valueentity.ValueEntityTckModel.Process:input_type -> functions.tck.model.valueentity.Request
+	0, // 7: functions.tck.model.valueentity.ValueEntityTwo.Call:input_type -> functions.tck.model.valueentity.Request
+	0, // 8: functions.tck.model.valueentity.ValueEntityConfigured.Call:input_type -> functions.tck.model.valueentity.Request
+	7, // 9: functions.tck.model.valueentity.ValueEntityTckModel.Process:output_type -> functions.tck.model.valueentity.Response
+	7, // 10: functions.tck.model.valueentity.ValueEntityTwo.Call:output_type -> functions.tck.model.valueentity.Response
+	7, // 11: functions.tck.model.valueentity.ValueEntityConfigured.Call:output_type -> functions.tck.model.valueentity.Response
 	9, // [9:12] is the sub-list for method output_type
 	6, // [6:9] is the sub-list for method input_type
 	6, // [6:6] is the sub-list for extension type_name

@@ -35,7 +35,7 @@ func NewEventLogSubscriberModelClient(cc grpc.ClientConnInterface) EventLogSubsc
 
 func (c *eventLogSubscriberModelClient) ProcessEventOne(ctx context.Context, in *EventOne, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel/ProcessEventOne", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.eventlogeventing.EventLogSubscriberModel/ProcessEventOne", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -43,7 +43,7 @@ func (c *eventLogSubscriberModelClient) ProcessEventOne(ctx context.Context, in 
 }
 
 func (c *eventLogSubscriberModelClient) ProcessEventTwo(ctx context.Context, in *EventTwo, opts ...grpc.CallOption) (EventLogSubscriberModel_ProcessEventTwoClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_EventLogSubscriberModel_serviceDesc.Streams[0], "/cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel/ProcessEventTwo", opts...)
+	stream, err := c.cc.NewStream(ctx, &_EventLogSubscriberModel_serviceDesc.Streams[0], "/functions.tck.model.eventlogeventing.EventLogSubscriberModel/ProcessEventTwo", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -76,7 +76,7 @@ func (x *eventLogSubscriberModelProcessEventTwoClient) Recv() (*Response, error)
 
 func (c *eventLogSubscriberModelClient) Effect(ctx context.Context, in *EffectRequest, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel/Effect", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.eventlogeventing.EventLogSubscriberModel/Effect", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -85,7 +85,7 @@ func (c *eventLogSubscriberModelClient) Effect(ctx context.Context, in *EffectRe
 
 func (c *eventLogSubscriberModelClient) ProcessAnyEvent(ctx context.Context, in *any.Any, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel/ProcessAnyEvent", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.eventlogeventing.EventLogSubscriberModel/ProcessAnyEvent", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -143,7 +143,7 @@ func _EventLogSubscriberModel_ProcessEventOne_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel/ProcessEventOne",
+		FullMethod: "/functions.tck.model.eventlogeventing.EventLogSubscriberModel/ProcessEventOne",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(EventLogSubscriberModelServer).ProcessEventOne(ctx, req.(*EventOne))
@@ -182,7 +182,7 @@ func _EventLogSubscriberModel_Effect_Handler(srv interface{}, ctx context.Contex
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel/Effect",
+		FullMethod: "/functions.tck.model.eventlogeventing.EventLogSubscriberModel/Effect",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(EventLogSubscriberModelServer).Effect(ctx, req.(*EffectRequest))
@@ -200,7 +200,7 @@ func _EventLogSubscriberModel_ProcessAnyEvent_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel/ProcessAnyEvent",
+		FullMethod: "/functions.tck.model.eventlogeventing.EventLogSubscriberModel/ProcessAnyEvent",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(EventLogSubscriberModelServer).ProcessAnyEvent(ctx, req.(*any.Any))
@@ -209,7 +209,7 @@ func _EventLogSubscriberModel_ProcessAnyEvent_Handler(srv interface{}, ctx conte
 }
 
 var _EventLogSubscriberModel_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel",
+	ServiceName: "functions.tck.model.eventlogeventing.EventLogSubscriberModel",
 	HandlerType: (*EventLogSubscriberModelServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -252,7 +252,7 @@ func NewEventSourcedEntityOneClient(cc grpc.ClientConnInterface) EventSourcedEnt
 
 func (c *eventSourcedEntityOneClient) EmitEvent(ctx context.Context, in *EmitEventRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.eventlogeventing.EventSourcedEntityOne/EmitEvent", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.eventlogeventing.EventSourcedEntityOne/EmitEvent", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -297,7 +297,7 @@ func _EventSourcedEntityOne_EmitEvent_Handler(srv interface{}, ctx context.Conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.eventlogeventing.EventSourcedEntityOne/EmitEvent",
+		FullMethod: "/functions.tck.model.eventlogeventing.EventSourcedEntityOne/EmitEvent",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(EventSourcedEntityOneServer).EmitEvent(ctx, req.(*EmitEventRequest))
@@ -306,7 +306,7 @@ func _EventSourcedEntityOne_EmitEvent_Handler(srv interface{}, ctx context.Conte
 }
 
 var _EventSourcedEntityOne_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.eventlogeventing.EventSourcedEntityOne",
+	ServiceName: "functions.tck.model.eventlogeventing.EventSourcedEntityOne",
 	HandlerType: (*EventSourcedEntityOneServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -335,7 +335,7 @@ func NewEventSourcedEntityTwoClient(cc grpc.ClientConnInterface) EventSourcedEnt
 
 func (c *eventSourcedEntityTwoClient) EmitJsonEvent(ctx context.Context, in *JsonEvent, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.eventlogeventing.EventSourcedEntityTwo/EmitJsonEvent", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.eventlogeventing.EventSourcedEntityTwo/EmitJsonEvent", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -380,7 +380,7 @@ func _EventSourcedEntityTwo_EmitJsonEvent_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.eventlogeventing.EventSourcedEntityTwo/EmitJsonEvent",
+		FullMethod: "/functions.tck.model.eventlogeventing.EventSourcedEntityTwo/EmitJsonEvent",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(EventSourcedEntityTwoServer).EmitJsonEvent(ctx, req.(*JsonEvent))
@@ -389,7 +389,7 @@ func _EventSourcedEntityTwo_EmitJsonEvent_Handler(srv interface{}, ctx context.C
 }
 
 var _EventSourcedEntityTwo_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.eventlogeventing.EventSourcedEntityTwo",
+	ServiceName: "functions.tck.model.eventlogeventing.EventSourcedEntityTwo",
 	HandlerType: (*EventSourcedEntityTwoServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

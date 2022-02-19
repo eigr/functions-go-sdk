@@ -31,7 +31,7 @@ func NewCrdtTckModelClient(cc grpc.ClientConnInterface) CrdtTckModelClient {
 
 func (c *crdtTckModelClient) Process(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.crdt.CrdtTckModel/Process", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.crdt.CrdtTckModel/Process", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -39,7 +39,7 @@ func (c *crdtTckModelClient) Process(ctx context.Context, in *Request, opts ...g
 }
 
 func (c *crdtTckModelClient) ProcessStreamed(ctx context.Context, in *StreamedRequest, opts ...grpc.CallOption) (CrdtTckModel_ProcessStreamedClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_CrdtTckModel_serviceDesc.Streams[0], "/cloudstate.tck.model.crdt.CrdtTckModel/ProcessStreamed", opts...)
+	stream, err := c.cc.NewStream(ctx, &_CrdtTckModel_serviceDesc.Streams[0], "/functions.tck.model.crdt.CrdtTckModel/ProcessStreamed", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -112,7 +112,7 @@ func _CrdtTckModel_Process_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.crdt.CrdtTckModel/Process",
+		FullMethod: "/functions.tck.model.crdt.CrdtTckModel/Process",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CrdtTckModelServer).Process(ctx, req.(*Request))
@@ -142,7 +142,7 @@ func (x *crdtTckModelProcessStreamedServer) Send(m *Response) error {
 }
 
 var _CrdtTckModel_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.crdt.CrdtTckModel",
+	ServiceName: "functions.tck.model.crdt.CrdtTckModel",
 	HandlerType: (*CrdtTckModelServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -177,7 +177,7 @@ func NewCrdtTwoClient(cc grpc.ClientConnInterface) CrdtTwoClient {
 
 func (c *crdtTwoClient) Call(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.crdt.CrdtTwo/Call", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.crdt.CrdtTwo/Call", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -222,7 +222,7 @@ func _CrdtTwo_Call_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.crdt.CrdtTwo/Call",
+		FullMethod: "/functions.tck.model.crdt.CrdtTwo/Call",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CrdtTwoServer).Call(ctx, req.(*Request))
@@ -231,7 +231,7 @@ func _CrdtTwo_Call_Handler(srv interface{}, ctx context.Context, dec func(interf
 }
 
 var _CrdtTwo_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.crdt.CrdtTwo",
+	ServiceName: "functions.tck.model.crdt.CrdtTwo",
 	HandlerType: (*CrdtTwoServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -260,7 +260,7 @@ func NewCrdtConfiguredClient(cc grpc.ClientConnInterface) CrdtConfiguredClient {
 
 func (c *crdtConfiguredClient) Call(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.crdt.CrdtConfigured/Call", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.crdt.CrdtConfigured/Call", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -305,7 +305,7 @@ func _CrdtConfigured_Call_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.crdt.CrdtConfigured/Call",
+		FullMethod: "/functions.tck.model.crdt.CrdtConfigured/Call",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CrdtConfiguredServer).Call(ctx, req.(*Request))
@@ -314,7 +314,7 @@ func _CrdtConfigured_Call_Handler(srv interface{}, ctx context.Context, dec func
 }
 
 var _CrdtConfigured_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.crdt.CrdtConfigured",
+	ServiceName: "functions.tck.model.crdt.CrdtConfigured",
 	HandlerType: (*CrdtConfiguredServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

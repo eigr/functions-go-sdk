@@ -25,7 +25,7 @@
 package presence
 
 import (
-	_ "github.com/eigr/functions-go-sdk/cloudstate"
+	_ "github.com/eigr/functions-go-sdk/functions"
 	proto "github.com/golang/protobuf/proto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
@@ -227,15 +227,15 @@ func file_presence_proto_rawDescGZIP() []byte {
 
 var file_presence_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_presence_proto_goTypes = []interface{}{
-	(*User)(nil),         // 0: cloudstate.samples.chat.presence.User
-	(*OnlineStatus)(nil), // 1: cloudstate.samples.chat.presence.OnlineStatus
-	(*Empty)(nil),        // 2: cloudstate.samples.chat.presence.Empty
+	(*User)(nil),         // 0: functions.samples.chat.presence.User
+	(*OnlineStatus)(nil), // 1: functions.samples.chat.presence.OnlineStatus
+	(*Empty)(nil),        // 2: functions.samples.chat.presence.Empty
 }
 var file_presence_proto_depIdxs = []int32{
-	0, // 0: cloudstate.samples.chat.presence.Presence.Connect:input_type -> cloudstate.samples.chat.presence.User
-	0, // 1: cloudstate.samples.chat.presence.Presence.Monitor:input_type -> cloudstate.samples.chat.presence.User
-	2, // 2: cloudstate.samples.chat.presence.Presence.Connect:output_type -> cloudstate.samples.chat.presence.Empty
-	1, // 3: cloudstate.samples.chat.presence.Presence.Monitor:output_type -> cloudstate.samples.chat.presence.OnlineStatus
+	0, // 0: functions.samples.chat.presence.Presence.Connect:input_type -> functions.samples.chat.presence.User
+	0, // 1: functions.samples.chat.presence.Presence.Monitor:input_type -> functions.samples.chat.presence.User
+	2, // 2: functions.samples.chat.presence.Presence.Connect:output_type -> functions.samples.chat.presence.Empty
+	1, // 3: functions.samples.chat.presence.Presence.Monitor:output_type -> functions.samples.chat.presence.OnlineStatus
 	2, // [2:4] is the sub-list for method output_type
 	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name

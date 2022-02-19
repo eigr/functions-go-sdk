@@ -16,7 +16,7 @@
 package eventlogeventing
 
 import (
-	_ "github.com/eigr/functions-go-sdk/cloudstate"
+	_ "github.com/eigr/functions-go-sdk/functions"
 	proto "github.com/golang/protobuf/proto"
 	any "github.com/golang/protobuf/ptypes/any"
 	empty "github.com/golang/protobuf/ptypes/empty"
@@ -427,7 +427,7 @@ func (x *Reply) GetMessage() string {
 }
 
 //
-// Replace the response with a forward to `cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel/Effect`.
+// Replace the response with a forward to `functions.tck.model.eventlogeventing.EventLogSubscriberModel/Effect`.
 // The payload must be an `EffectRequest` message with the given `message`.
 //
 type Forward struct {
@@ -727,37 +727,37 @@ func file_eventlogeventing_proto_rawDescGZIP() []byte {
 
 var file_eventlogeventing_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_eventlogeventing_proto_goTypes = []interface{}{
-	(*EmitEventRequest)(nil), // 0: cloudstate.tck.model.eventlogeventing.EmitEventRequest
-	(*EventOne)(nil),         // 1: cloudstate.tck.model.eventlogeventing.EventOne
-	(*EventTwo)(nil),         // 2: cloudstate.tck.model.eventlogeventing.EventTwo
-	(*JsonEvent)(nil),        // 3: cloudstate.tck.model.eventlogeventing.JsonEvent
-	(*ProcessStep)(nil),      // 4: cloudstate.tck.model.eventlogeventing.ProcessStep
-	(*Reply)(nil),            // 5: cloudstate.tck.model.eventlogeventing.Reply
-	(*Forward)(nil),          // 6: cloudstate.tck.model.eventlogeventing.Forward
-	(*Response)(nil),         // 7: cloudstate.tck.model.eventlogeventing.Response
-	(*EffectRequest)(nil),    // 8: cloudstate.tck.model.eventlogeventing.EffectRequest
+	(*EmitEventRequest)(nil), // 0: functions.tck.model.eventlogeventing.EmitEventRequest
+	(*EventOne)(nil),         // 1: functions.tck.model.eventlogeventing.EventOne
+	(*EventTwo)(nil),         // 2: functions.tck.model.eventlogeventing.EventTwo
+	(*JsonEvent)(nil),        // 3: functions.tck.model.eventlogeventing.JsonEvent
+	(*ProcessStep)(nil),      // 4: functions.tck.model.eventlogeventing.ProcessStep
+	(*Reply)(nil),            // 5: functions.tck.model.eventlogeventing.Reply
+	(*Forward)(nil),          // 6: functions.tck.model.eventlogeventing.Forward
+	(*Response)(nil),         // 7: functions.tck.model.eventlogeventing.Response
+	(*EffectRequest)(nil),    // 8: functions.tck.model.eventlogeventing.EffectRequest
 	(*any.Any)(nil),          // 9: google.protobuf.Any
 	(*empty.Empty)(nil),      // 10: google.protobuf.Empty
 }
 var file_eventlogeventing_proto_depIdxs = []int32{
-	1,  // 0: cloudstate.tck.model.eventlogeventing.EmitEventRequest.event_one:type_name -> cloudstate.tck.model.eventlogeventing.EventOne
-	2,  // 1: cloudstate.tck.model.eventlogeventing.EmitEventRequest.event_two:type_name -> cloudstate.tck.model.eventlogeventing.EventTwo
-	4,  // 2: cloudstate.tck.model.eventlogeventing.EventOne.step:type_name -> cloudstate.tck.model.eventlogeventing.ProcessStep
-	4,  // 3: cloudstate.tck.model.eventlogeventing.EventTwo.step:type_name -> cloudstate.tck.model.eventlogeventing.ProcessStep
-	5,  // 4: cloudstate.tck.model.eventlogeventing.ProcessStep.reply:type_name -> cloudstate.tck.model.eventlogeventing.Reply
-	6,  // 5: cloudstate.tck.model.eventlogeventing.ProcessStep.forward:type_name -> cloudstate.tck.model.eventlogeventing.Forward
-	1,  // 6: cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel.ProcessEventOne:input_type -> cloudstate.tck.model.eventlogeventing.EventOne
-	2,  // 7: cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel.ProcessEventTwo:input_type -> cloudstate.tck.model.eventlogeventing.EventTwo
-	8,  // 8: cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel.Effect:input_type -> cloudstate.tck.model.eventlogeventing.EffectRequest
-	9,  // 9: cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel.ProcessAnyEvent:input_type -> google.protobuf.Any
-	0,  // 10: cloudstate.tck.model.eventlogeventing.EventSourcedEntityOne.EmitEvent:input_type -> cloudstate.tck.model.eventlogeventing.EmitEventRequest
-	3,  // 11: cloudstate.tck.model.eventlogeventing.EventSourcedEntityTwo.EmitJsonEvent:input_type -> cloudstate.tck.model.eventlogeventing.JsonEvent
-	7,  // 12: cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel.ProcessEventOne:output_type -> cloudstate.tck.model.eventlogeventing.Response
-	7,  // 13: cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel.ProcessEventTwo:output_type -> cloudstate.tck.model.eventlogeventing.Response
-	7,  // 14: cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel.Effect:output_type -> cloudstate.tck.model.eventlogeventing.Response
-	7,  // 15: cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel.ProcessAnyEvent:output_type -> cloudstate.tck.model.eventlogeventing.Response
-	10, // 16: cloudstate.tck.model.eventlogeventing.EventSourcedEntityOne.EmitEvent:output_type -> google.protobuf.Empty
-	10, // 17: cloudstate.tck.model.eventlogeventing.EventSourcedEntityTwo.EmitJsonEvent:output_type -> google.protobuf.Empty
+	1,  // 0: functions.tck.model.eventlogeventing.EmitEventRequest.event_one:type_name -> functions.tck.model.eventlogeventing.EventOne
+	2,  // 1: functions.tck.model.eventlogeventing.EmitEventRequest.event_two:type_name -> functions.tck.model.eventlogeventing.EventTwo
+	4,  // 2: functions.tck.model.eventlogeventing.EventOne.step:type_name -> functions.tck.model.eventlogeventing.ProcessStep
+	4,  // 3: functions.tck.model.eventlogeventing.EventTwo.step:type_name -> functions.tck.model.eventlogeventing.ProcessStep
+	5,  // 4: functions.tck.model.eventlogeventing.ProcessStep.reply:type_name -> functions.tck.model.eventlogeventing.Reply
+	6,  // 5: functions.tck.model.eventlogeventing.ProcessStep.forward:type_name -> functions.tck.model.eventlogeventing.Forward
+	1,  // 6: functions.tck.model.eventlogeventing.EventLogSubscriberModel.ProcessEventOne:input_type -> functions.tck.model.eventlogeventing.EventOne
+	2,  // 7: functions.tck.model.eventlogeventing.EventLogSubscriberModel.ProcessEventTwo:input_type -> functions.tck.model.eventlogeventing.EventTwo
+	8,  // 8: functions.tck.model.eventlogeventing.EventLogSubscriberModel.Effect:input_type -> functions.tck.model.eventlogeventing.EffectRequest
+	9,  // 9: functions.tck.model.eventlogeventing.EventLogSubscriberModel.ProcessAnyEvent:input_type -> google.protobuf.Any
+	0,  // 10: functions.tck.model.eventlogeventing.EventSourcedEntityOne.EmitEvent:input_type -> functions.tck.model.eventlogeventing.EmitEventRequest
+	3,  // 11: functions.tck.model.eventlogeventing.EventSourcedEntityTwo.EmitJsonEvent:input_type -> functions.tck.model.eventlogeventing.JsonEvent
+	7,  // 12: functions.tck.model.eventlogeventing.EventLogSubscriberModel.ProcessEventOne:output_type -> functions.tck.model.eventlogeventing.Response
+	7,  // 13: functions.tck.model.eventlogeventing.EventLogSubscriberModel.ProcessEventTwo:output_type -> functions.tck.model.eventlogeventing.Response
+	7,  // 14: functions.tck.model.eventlogeventing.EventLogSubscriberModel.Effect:output_type -> functions.tck.model.eventlogeventing.Response
+	7,  // 15: functions.tck.model.eventlogeventing.EventLogSubscriberModel.ProcessAnyEvent:output_type -> functions.tck.model.eventlogeventing.Response
+	10, // 16: functions.tck.model.eventlogeventing.EventSourcedEntityOne.EmitEvent:output_type -> google.protobuf.Empty
+	10, // 17: functions.tck.model.eventlogeventing.EventSourcedEntityTwo.EmitJsonEvent:output_type -> google.protobuf.Empty
 	12, // [12:18] is the sub-list for method output_type
 	6,  // [6:12] is the sub-list for method input_type
 	6,  // [6:6] is the sub-list for extension type_name

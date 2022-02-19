@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/eigr/functions-go-sdk/cloudstate/crdt"
-	"github.com/eigr/functions-go-sdk/cloudstate/encoding"
+	"github.com/eigr/functions-go-sdk/functions/crdt"
+	"github.com/eigr/functions-go-sdk/functions/encoding"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/any"
 	"github.com/golang/protobuf/ptypes/empty"

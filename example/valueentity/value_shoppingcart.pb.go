@@ -30,7 +30,7 @@
 package valueentity
 
 import (
-	_ "github.com/eigr/functions-go-sdk/cloudstate"
+	_ "github.com/eigr/functions-go-sdk/functions"
 	proto "github.com/golang/protobuf/proto"
 	empty "github.com/golang/protobuf/ptypes/empty"
 	_ "google.golang.org/genproto/googleapis/api/annotations"

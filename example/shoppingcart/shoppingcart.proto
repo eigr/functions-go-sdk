@@ -16,8 +16,8 @@
 syntax = "proto3";
 
 import "google/protobuf/empty.proto";
-import "cloudstate/entity_key.proto";
-import "cloudstate/eventing.proto";
+import "functions/entity_key.proto";
+import "functions/eventing.proto";
 import "google/api/annotations.proto";
 import "google/api/http.proto";
 import "google/api/httpbody.proto";

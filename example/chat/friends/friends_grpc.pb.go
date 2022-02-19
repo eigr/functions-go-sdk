@@ -32,7 +32,7 @@ func NewFriendsClient(cc grpc.ClientConnInterface) FriendsClient {
 
 func (c *friendsClient) Add(ctx context.Context, in *FriendRequest, opts ...grpc.CallOption) (*Empty, error) {
 	out := new(Empty)
-	err := c.cc.Invoke(ctx, "/cloudstate.samples.chat.friends.Friends/Add", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.samples.chat.friends.Friends/Add", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -41,7 +41,7 @@ func (c *friendsClient) Add(ctx context.Context, in *FriendRequest, opts ...grpc
 
 func (c *friendsClient) Remove(ctx context.Context, in *FriendRequest, opts ...grpc.CallOption) (*Empty, error) {
 	out := new(Empty)
-	err := c.cc.Invoke(ctx, "/cloudstate.samples.chat.friends.Friends/Remove", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.samples.chat.friends.Friends/Remove", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -50,7 +50,7 @@ func (c *friendsClient) Remove(ctx context.Context, in *FriendRequest, opts ...g
 
 func (c *friendsClient) GetFriends(ctx context.Context, in *User, opts ...grpc.CallOption) (*FriendsList, error) {
 	out := new(FriendsList)
-	err := c.cc.Invoke(ctx, "/cloudstate.samples.chat.friends.Friends/GetFriends", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.samples.chat.friends.Friends/GetFriends", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -103,7 +103,7 @@ func _Friends_Add_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.samples.chat.friends.Friends/Add",
+		FullMethod: "/functions.samples.chat.friends.Friends/Add",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(FriendsServer).Add(ctx, req.(*FriendRequest))
@@ -121,7 +121,7 @@ func _Friends_Remove_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.samples.chat.friends.Friends/Remove",
+		FullMethod: "/functions.samples.chat.friends.Friends/Remove",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(FriendsServer).Remove(ctx, req.(*FriendRequest))
@@ -139,7 +139,7 @@ func _Friends_GetFriends_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.samples.chat.friends.Friends/GetFriends",
+		FullMethod: "/functions.samples.chat.friends.Friends/GetFriends",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(FriendsServer).GetFriends(ctx, req.(*User))
@@ -148,7 +148,7 @@ func _Friends_GetFriends_Handler(srv interface{}, ctx context.Context, dec func(
 }
 
 var _Friends_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.samples.chat.friends.Friends",
+	ServiceName: "functions.samples.chat.friends.Friends",
 	HandlerType: (*FriendsServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

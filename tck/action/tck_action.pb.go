@@ -303,7 +303,7 @@ func (x *Reply) GetMessage() string {
 }
 
 //
-// Replace the response with a forward to `cloudstate.tck.model.ActionTwo/Call`.
+// Replace the response with a forward to `functions.tck.model.ActionTwo/Call`.
 // The payload must be an `OtherRequest` message with the given `id`.
 //
 type Forward struct {
@@ -404,7 +404,7 @@ func (x *Fail) GetMessage() string {
 }
 
 //
-// Add a side effect to the reply, to `cloudstate.tck.model.ActionTwo/Call`.
+// Add a side effect to the reply, to `functions.tck.model.ActionTwo/Call`.
 // The payload must be an `OtherRequest` message with the given `id`.
 // The side effect should be marked synchronous based on the given `synchronous` value.
 //
@@ -669,33 +669,33 @@ func file_tck_action_proto_rawDescGZIP() []byte {
 
 var file_tck_action_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_tck_action_proto_goTypes = []interface{}{
-	(*Request)(nil),      // 0: cloudstate.tck.model.action.Request
-	(*ProcessGroup)(nil), // 1: cloudstate.tck.model.action.ProcessGroup
-	(*ProcessStep)(nil),  // 2: cloudstate.tck.model.action.ProcessStep
-	(*Reply)(nil),        // 3: cloudstate.tck.model.action.Reply
-	(*Forward)(nil),      // 4: cloudstate.tck.model.action.Forward
-	(*Fail)(nil),         // 5: cloudstate.tck.model.action.Fail
-	(*SideEffect)(nil),   // 6: cloudstate.tck.model.action.SideEffect
-	(*Response)(nil),     // 7: cloudstate.tck.model.action.Response
-	(*OtherRequest)(nil), // 8: cloudstate.tck.model.action.OtherRequest
+	(*Request)(nil),      // 0: functions.tck.model.action.Request
+	(*ProcessGroup)(nil), // 1: functions.tck.model.action.ProcessGroup
+	(*ProcessStep)(nil),  // 2: functions.tck.model.action.ProcessStep
+	(*Reply)(nil),        // 3: functions.tck.model.action.Reply
+	(*Forward)(nil),      // 4: functions.tck.model.action.Forward
+	(*Fail)(nil),         // 5: functions.tck.model.action.Fail
+	(*SideEffect)(nil),   // 6: functions.tck.model.action.SideEffect
+	(*Response)(nil),     // 7: functions.tck.model.action.Response
+	(*OtherRequest)(nil), // 8: functions.tck.model.action.OtherRequest
 }
 var file_tck_action_proto_depIdxs = []int32{
-	1,  // 0: cloudstate.tck.model.action.Request.groups:type_name -> cloudstate.tck.model.action.ProcessGroup
-	2,  // 1: cloudstate.tck.model.action.ProcessGroup.steps:type_name -> cloudstate.tck.model.action.ProcessStep
-	3,  // 2: cloudstate.tck.model.action.ProcessStep.reply:type_name -> cloudstate.tck.model.action.Reply
-	4,  // 3: cloudstate.tck.model.action.ProcessStep.forward:type_name -> cloudstate.tck.model.action.Forward
-	5,  // 4: cloudstate.tck.model.action.ProcessStep.fail:type_name -> cloudstate.tck.model.action.Fail
-	6,  // 5: cloudstate.tck.model.action.ProcessStep.effect:type_name -> cloudstate.tck.model.action.SideEffect
-	0,  // 6: cloudstate.tck.model.action.ActionTckModel.ProcessUnary:input_type -> cloudstate.tck.model.action.Request
-	0,  // 7: cloudstate.tck.model.action.ActionTckModel.ProcessStreamedIn:input_type -> cloudstate.tck.model.action.Request
-	0,  // 8: cloudstate.tck.model.action.ActionTckModel.ProcessStreamedOut:input_type -> cloudstate.tck.model.action.Request
-	0,  // 9: cloudstate.tck.model.action.ActionTckModel.ProcessStreamed:input_type -> cloudstate.tck.model.action.Request
-	8,  // 10: cloudstate.tck.model.action.ActionTwo.Call:input_type -> cloudstate.tck.model.action.OtherRequest
-	7,  // 11: cloudstate.tck.model.action.ActionTckModel.ProcessUnary:output_type -> cloudstate.tck.model.action.Response
-	7,  // 12: cloudstate.tck.model.action.ActionTckModel.ProcessStreamedIn:output_type -> cloudstate.tck.model.action.Response
-	7,  // 13: cloudstate.tck.model.action.ActionTckModel.ProcessStreamedOut:output_type -> cloudstate.tck.model.action.Response
-	7,  // 14: cloudstate.tck.model.action.ActionTckModel.ProcessStreamed:output_type -> cloudstate.tck.model.action.Response
-	7,  // 15: cloudstate.tck.model.action.ActionTwo.Call:output_type -> cloudstate.tck.model.action.Response
+	1,  // 0: functions.tck.model.action.Request.groups:type_name -> functions.tck.model.action.ProcessGroup
+	2,  // 1: functions.tck.model.action.ProcessGroup.steps:type_name -> functions.tck.model.action.ProcessStep
+	3,  // 2: functions.tck.model.action.ProcessStep.reply:type_name -> functions.tck.model.action.Reply
+	4,  // 3: functions.tck.model.action.ProcessStep.forward:type_name -> functions.tck.model.action.Forward
+	5,  // 4: functions.tck.model.action.ProcessStep.fail:type_name -> functions.tck.model.action.Fail
+	6,  // 5: functions.tck.model.action.ProcessStep.effect:type_name -> functions.tck.model.action.SideEffect
+	0,  // 6: functions.tck.model.action.ActionTckModel.ProcessUnary:input_type -> functions.tck.model.action.Request
+	0,  // 7: functions.tck.model.action.ActionTckModel.ProcessStreamedIn:input_type -> functions.tck.model.action.Request
+	0,  // 8: functions.tck.model.action.ActionTckModel.ProcessStreamedOut:input_type -> functions.tck.model.action.Request
+	0,  // 9: functions.tck.model.action.ActionTckModel.ProcessStreamed:input_type -> functions.tck.model.action.Request
+	8,  // 10: functions.tck.model.action.ActionTwo.Call:input_type -> functions.tck.model.action.OtherRequest
+	7,  // 11: functions.tck.model.action.ActionTckModel.ProcessUnary:output_type -> functions.tck.model.action.Response
+	7,  // 12: functions.tck.model.action.ActionTckModel.ProcessStreamedIn:output_type -> functions.tck.model.action.Response
+	7,  // 13: functions.tck.model.action.ActionTckModel.ProcessStreamedOut:output_type -> functions.tck.model.action.Response
+	7,  // 14: functions.tck.model.action.ActionTckModel.ProcessStreamed:output_type -> functions.tck.model.action.Response
+	7,  // 15: functions.tck.model.action.ActionTwo.Call:output_type -> functions.tck.model.action.Response
 	11, // [11:16] is the sub-list for method output_type
 	6,  // [6:11] is the sub-list for method input_type
 	6,  // [6:6] is the sub-list for extension type_name

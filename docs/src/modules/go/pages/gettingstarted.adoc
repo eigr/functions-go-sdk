@@ -32,7 +32,7 @@ import path::
 +
 [source,go]
 ----
-import "github.com/eigr/functions-go-sdk/cloudstate"
+import "github.com/eigr/functions-go-sdk/functions"
 ----
 
 go.mod::

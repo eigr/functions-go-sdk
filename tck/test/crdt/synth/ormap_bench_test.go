@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/eigr/functions-go-sdk/cloudstate/encoding"
-	"github.com/eigr/functions-go-sdk/cloudstate/entity"
+	"github.com/eigr/functions-go-sdk/functions/encoding"
+	"github.com/eigr/functions-go-sdk/functions/entity"
 	"github.com/eigr/functions-go-sdk/tck/crdt"
 )
 

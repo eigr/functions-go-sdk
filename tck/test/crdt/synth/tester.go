@@ -20,7 +20,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/eigr/functions-go-sdk/cloudstate/encoding"
+	"github.com/eigr/functions-go-sdk/functions/encoding"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/any"
 )
