@@ -19,7 +19,7 @@ syntax = "proto3";
 
 package com.example.shoppingcart.persistence;
 
-option go_package = "github.com/eigr/permastate-go/example/shoppingcart/persistence;persistence";
+option go_package = "github.com/eigr/functions-go-sdk/example/shoppingcart/persistence;persistence";
 
 message LineItem {
     string productId = 1;

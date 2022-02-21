@@ -30,7 +30,7 @@ func NewValueEntityTckModelClient(cc grpc.ClientConnInterface) ValueEntityTckMod
 
 func (c *valueEntityTckModelClient) Process(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.valueentity.ValueEntityTckModel/Process", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.valueentity.ValueEntityTckModel/Process", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -75,7 +75,7 @@ func _ValueEntityTckModel_Process_Handler(srv interface{}, ctx context.Context, 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.valueentity.ValueEntityTckModel/Process",
+		FullMethod: "/functions.tck.model.valueentity.ValueEntityTckModel/Process",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ValueEntityTckModelServer).Process(ctx, req.(*Request))
@@ -84,7 +84,7 @@ func _ValueEntityTckModel_Process_Handler(srv interface{}, ctx context.Context, 
 }
 
 var _ValueEntityTckModel_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.valueentity.ValueEntityTckModel",
+	ServiceName: "functions.tck.model.valueentity.ValueEntityTckModel",
 	HandlerType: (*ValueEntityTckModelServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -113,7 +113,7 @@ func NewValueEntityTwoClient(cc grpc.ClientConnInterface) ValueEntityTwoClient {
 
 func (c *valueEntityTwoClient) Call(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.valueentity.ValueEntityTwo/Call", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.valueentity.ValueEntityTwo/Call", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -158,7 +158,7 @@ func _ValueEntityTwo_Call_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.valueentity.ValueEntityTwo/Call",
+		FullMethod: "/functions.tck.model.valueentity.ValueEntityTwo/Call",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ValueEntityTwoServer).Call(ctx, req.(*Request))
@@ -167,7 +167,7 @@ func _ValueEntityTwo_Call_Handler(srv interface{}, ctx context.Context, dec func
 }
 
 var _ValueEntityTwo_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.valueentity.ValueEntityTwo",
+	ServiceName: "functions.tck.model.valueentity.ValueEntityTwo",
 	HandlerType: (*ValueEntityTwoServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -196,7 +196,7 @@ func NewValueEntityConfiguredClient(cc grpc.ClientConnInterface) ValueEntityConf
 
 func (c *valueEntityConfiguredClient) Call(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.valueentity.ValueEntityConfigured/Call", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.valueentity.ValueEntityConfigured/Call", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -241,7 +241,7 @@ func _ValueEntityConfigured_Call_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.valueentity.ValueEntityConfigured/Call",
+		FullMethod: "/functions.tck.model.valueentity.ValueEntityConfigured/Call",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ValueEntityConfiguredServer).Call(ctx, req.(*Request))
@@ -250,7 +250,7 @@ func _ValueEntityConfigured_Call_Handler(srv interface{}, ctx context.Context, d
 }
 
 var _ValueEntityConfigured_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.valueentity.ValueEntityConfigured",
+	ServiceName: "functions.tck.model.valueentity.ValueEntityConfigured",
 	HandlerType: (*ValueEntityConfiguredServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

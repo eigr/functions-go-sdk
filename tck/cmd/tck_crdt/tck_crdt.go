@@ -19,19 +19,19 @@ package main
 import (
 	"log"
 
-	"github.com/eigr/permastate-go/cloudstate"
-	"github.com/eigr/permastate-go/cloudstate/crdt"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
-	tck "github.com/eigr/permastate-go/tck/crdt"
+	"github.com/eigr/functions-go-sdk/functions"
+	"github.com/eigr/functions-go-sdk/functions/crdt"
+	"github.com/eigr/functions-go-sdk/functions/protocol"
+	tck "github.com/eigr/functions-go-sdk/tck/crdt"
 )
 
 func main() {
-	server, err := cloudstate.New(protocol.Config{
-		ServiceName:    "io.cloudstate.tck.Crdt", // the servicename the proxy gets to know about
+	server, err := functions.New(protocol.Config{
+		ServiceName:    "io.functions.tck.Crdt", // the servicename the proxy gets to know about
 		ServiceVersion: "0.2.0",
 	})
 	if err != nil {
-		log.Fatalf("cloudstate.New failed: %v", err)
+		log.Fatalf("functions.New failed: %v", err)
 	}
 	err = server.RegisterCRDT(
 		&crdt.Entity{

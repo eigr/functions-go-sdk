@@ -20,9 +20,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/eigr/permastate-go/cloudstate/encoding"
-	"github.com/eigr/permastate-go/cloudstate/eventsourced"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/functions/encoding"
+	"github.com/eigr/functions-go-sdk/functions/eventsourced"
+	"github.com/eigr/functions-go-sdk/functions/protocol"
 	"github.com/golang/protobuf/proto"
 )
 
@@ -47,7 +47,7 @@ func (m *TestModel) HandleCommand(ctx *eventsourced.Context, name string, cmd pr
 					return nil, err
 				}
 				ctx.Forward(&protocol.Forward{
-					ServiceName: "cloudstate.tck.model.EventSourcedTwo",
+					ServiceName: "functions.tck.model.EventSourcedTwo",
 					CommandName: "Call",
 					Payload:     req,
 				})
@@ -57,7 +57,7 @@ func (m *TestModel) HandleCommand(ctx *eventsourced.Context, name string, cmd pr
 					return nil, err
 				}
 				ctx.Effect(&protocol.SideEffect{
-					ServiceName: "cloudstate.tck.model.EventSourcedTwo",
+					ServiceName: "functions.tck.model.EventSourcedTwo",
 					CommandName: "Call",
 					Payload:     req,
 					Synchronous: a.Effect.Synchronous,

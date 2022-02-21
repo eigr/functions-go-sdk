@@ -32,7 +32,7 @@ func NewPresenceClient(cc grpc.ClientConnInterface) PresenceClient {
 }
 
 func (c *presenceClient) Connect(ctx context.Context, in *User, opts ...grpc.CallOption) (Presence_ConnectClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_Presence_serviceDesc.Streams[0], "/cloudstate.samples.chat.presence.Presence/Connect", opts...)
+	stream, err := c.cc.NewStream(ctx, &_Presence_serviceDesc.Streams[0], "/functions.samples.chat.presence.Presence/Connect", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -64,7 +64,7 @@ func (x *presenceConnectClient) Recv() (*Empty, error) {
 }
 
 func (c *presenceClient) Monitor(ctx context.Context, in *User, opts ...grpc.CallOption) (Presence_MonitorClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_Presence_serviceDesc.Streams[1], "/cloudstate.samples.chat.presence.Presence/Monitor", opts...)
+	stream, err := c.cc.NewStream(ctx, &_Presence_serviceDesc.Streams[1], "/functions.samples.chat.presence.Presence/Monitor", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -172,7 +172,7 @@ func (x *presenceMonitorServer) Send(m *OnlineStatus) error {
 }
 
 var _Presence_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.samples.chat.presence.Presence",
+	ServiceName: "functions.samples.chat.presence.Presence",
 	HandlerType: (*PresenceServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{

@@ -30,7 +30,7 @@ func NewEventSourcedTckModelClient(cc grpc.ClientConnInterface) EventSourcedTckM
 
 func (c *eventSourcedTckModelClient) Process(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.EventSourcedTckModel/Process", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.EventSourcedTckModel/Process", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -75,7 +75,7 @@ func _EventSourcedTckModel_Process_Handler(srv interface{}, ctx context.Context,
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.EventSourcedTckModel/Process",
+		FullMethod: "/functions.tck.model.EventSourcedTckModel/Process",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(EventSourcedTckModelServer).Process(ctx, req.(*Request))
@@ -84,7 +84,7 @@ func _EventSourcedTckModel_Process_Handler(srv interface{}, ctx context.Context,
 }
 
 var _EventSourcedTckModel_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.EventSourcedTckModel",
+	ServiceName: "functions.tck.model.EventSourcedTckModel",
 	HandlerType: (*EventSourcedTckModelServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -113,7 +113,7 @@ func NewEventSourcedTwoClient(cc grpc.ClientConnInterface) EventSourcedTwoClient
 
 func (c *eventSourcedTwoClient) Call(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.EventSourcedTwo/Call", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.EventSourcedTwo/Call", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -158,7 +158,7 @@ func _EventSourcedTwo_Call_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.EventSourcedTwo/Call",
+		FullMethod: "/functions.tck.model.EventSourcedTwo/Call",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(EventSourcedTwoServer).Call(ctx, req.(*Request))
@@ -167,7 +167,7 @@ func _EventSourcedTwo_Call_Handler(srv interface{}, ctx context.Context, dec fun
 }
 
 var _EventSourcedTwo_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.EventSourcedTwo",
+	ServiceName: "functions.tck.model.EventSourcedTwo",
 	HandlerType: (*EventSourcedTwoServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -196,7 +196,7 @@ func NewEventSourcedConfiguredClient(cc grpc.ClientConnInterface) EventSourcedCo
 
 func (c *eventSourcedConfiguredClient) Call(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
-	err := c.cc.Invoke(ctx, "/cloudstate.tck.model.EventSourcedConfigured/Call", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/functions.tck.model.EventSourcedConfigured/Call", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -242,7 +242,7 @@ func _EventSourcedConfigured_Call_Handler(srv interface{}, ctx context.Context, 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cloudstate.tck.model.EventSourcedConfigured/Call",
+		FullMethod: "/functions.tck.model.EventSourcedConfigured/Call",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(EventSourcedConfiguredServer).Call(ctx, req.(*Request))
@@ -251,7 +251,7 @@ func _EventSourcedConfigured_Call_Handler(srv interface{}, ctx context.Context, 
 }
 
 var _EventSourcedConfigured_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "cloudstate.tck.model.EventSourcedConfigured",
+	ServiceName: "functions.tck.model.EventSourcedConfigured",
 	HandlerType: (*EventSourcedConfiguredServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

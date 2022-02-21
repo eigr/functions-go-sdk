@@ -20,32 +20,32 @@ import (
 	"log"
 	"time"
 
-	"github.com/eigr/permastate-go/cloudstate"
-	"github.com/eigr/permastate-go/cloudstate/action"
-	"github.com/eigr/permastate-go/cloudstate/crdt"
-	"github.com/eigr/permastate-go/cloudstate/eventsourced"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
-	"github.com/eigr/permastate-go/cloudstate/value"
-	"github.com/eigr/permastate-go/example/shoppingcart"
-	actionTCK "github.com/eigr/permastate-go/tck/action"
-	"github.com/eigr/permastate-go/tck/crdt2"
-	"github.com/eigr/permastate-go/tck/eventlogeventing"
-	tck "github.com/eigr/permastate-go/tck/eventsourced"
-	valueentity "github.com/eigr/permastate-go/tck/value"
+	"github.com/eigr/functions-go-sdk/functions"
+	"github.com/eigr/functions-go-sdk/functions/action"
+	"github.com/eigr/functions-go-sdk/functions/crdt"
+	"github.com/eigr/functions-go-sdk/functions/eventsourced"
+	"github.com/eigr/functions-go-sdk/functions/protocol"
+	"github.com/eigr/functions-go-sdk/functions/value"
+	"github.com/eigr/functions-go-sdk/example/shoppingcart"
+	actionTCK "github.com/eigr/functions-go-sdk/tck/action"
+	"github.com/eigr/functions-go-sdk/tck/crdt2"
+	"github.com/eigr/functions-go-sdk/tck/eventlogeventing"
+	tck "github.com/eigr/functions-go-sdk/tck/eventsourced"
+	valueentity "github.com/eigr/functions-go-sdk/tck/value"
 )
 
 // tag::shopping-cart-main[]
 func main() {
-	server, err := cloudstate.New(protocol.Config{
-		ServiceName:    "cloudstate.tck.model.EventSourcedTckModel", // the servicename the proxy gets to know about
+	server, err := functions.New(protocol.Config{
+		ServiceName:    "functions.tck.model.EventSourcedTckModel", // the servicename the proxy gets to know about
 		ServiceVersion: "0.2.0",
 	})
 	if err != nil {
-		log.Fatalf("cloudstate.New failed: %s", err)
+		log.Fatalf("functions.New failed: %s", err)
 	}
 	err = server.RegisterEventSourced(
 		&eventsourced.Entity{
-			ServiceName:   "cloudstate.tck.model.EventSourcedTckModel",
+			ServiceName:   "functions.tck.model.EventSourcedTckModel",
 			PersistenceID: "event-sourced-tck-model",
 			SnapshotEvery: 5,
 			EntityFunc:    tck.NewTestModel,
@@ -58,7 +58,7 @@ func main() {
 	}
 	err = server.RegisterEventSourced(
 		&eventsourced.Entity{
-			ServiceName:   "cloudstate.tck.model.EventSourcedTwo",
+			ServiceName:   "functions.tck.model.EventSourcedTwo",
 			PersistenceID: "EventSourcedTwo",
 			SnapshotEvery: 5,
 			EntityFunc:    tck.NewTestModelTwo,
@@ -71,7 +71,7 @@ func main() {
 	}
 	err = server.RegisterEventSourced(
 		&eventsourced.Entity{
-			ServiceName:   "cloudstate.tck.model.EventSourcedConfigured",
+			ServiceName:   "functions.tck.model.EventSourcedConfigured",
 			PersistenceID: "event-sourced-configured",
 			SnapshotEvery: 5,
 			EntityFunc:    tck.NewEventSourcedConfiguredEntity,
@@ -95,80 +95,80 @@ func main() {
 	}.AddDomainDescriptor("domain.proto"))
 	// end::register[]
 	if err != nil {
-		log.Fatalf("CloudState failed to register entity: %s", err)
+		log.Fatalf("Functions failed to register entity: %s", err)
 	}
 	// end::event-sourced-entity-type[]
 
 	err = server.RegisterAction(&action.Entity{
-		ServiceName: "cloudstate.tck.model.action.ActionTckModel",
+		ServiceName: "functions.tck.model.action.ActionTckModel",
 		EntityFunc:  actionTCK.NewTestModel,
 	}, protocol.DescriptorConfig{
 		Service: "tck_action.proto",
 	})
 	if err != nil {
-		log.Fatalf("CloudState failed to register entity: %s", err)
+		log.Fatalf("Functions failed to register entity: %s", err)
 	}
 	err = server.RegisterAction(&action.Entity{
-		ServiceName: "cloudstate.tck.model.action.ActionTwo",
+		ServiceName: "functions.tck.model.action.ActionTwo",
 		EntityFunc:  actionTCK.NewTestModelTwo,
 	}, protocol.DescriptorConfig{
 		Service: "tck_action.proto",
 	})
 	if err != nil {
-		log.Fatalf("CloudState failed to register entity: %s", err)
+		log.Fatalf("Functions failed to register entity: %s", err)
 	}
 
 	err = server.RegisterCRDT(&crdt.Entity{
-		ServiceName: "cloudstate.tck.model.crdt.CrdtTckModel",
+		ServiceName: "functions.tck.model.crdt.CrdtTckModel",
 		EntityFunc:  crdt2.NewCrdtTckModelEntity,
 	}, protocol.DescriptorConfig{
 		Service: "tck_crdt2.proto",
 	})
 	if err != nil {
-		log.Fatalf("CloudState failed to register entity: %s", err)
+		log.Fatalf("Functions failed to register entity: %s", err)
 	}
 	err = server.RegisterCRDT(&crdt.Entity{
-		ServiceName: "cloudstate.tck.model.crdt.CrdtTwo",
+		ServiceName: "functions.tck.model.crdt.CrdtTwo",
 		EntityFunc:  crdt2.NewCrdtTwoEntity,
 	}, protocol.DescriptorConfig{
 		Service: "tck_crdt2.proto",
 	})
 	if err != nil {
-		log.Fatalf("CloudState failed to register entity: %s", err)
+		log.Fatalf("Functions failed to register entity: %s", err)
 	}
 	err = server.RegisterCRDT(&crdt.Entity{
-		ServiceName: "cloudstate.tck.model.crdt.CrdtConfigured",
+		ServiceName: "functions.tck.model.crdt.CrdtConfigured",
 		EntityFunc:  crdt2.NewCrdtConfiguredEntity,
 	}, protocol.DescriptorConfig{
 		Service: "tck_crdt2.proto",
 	}, crdt.WithPassivationStrategyTimeout(100*time.Millisecond))
 	if err != nil {
-		log.Fatalf("CloudState failed to register entity: %s", err)
+		log.Fatalf("Functions failed to register entity: %s", err)
 	}
 
 	err = server.RegisterValueEntity(&value.Entity{
-		ServiceName:   "cloudstate.tck.model.valueentity.ValueEntityTckModel",
+		ServiceName:   "functions.tck.model.valueentity.ValueEntityTckModel",
 		EntityFunc:    valueentity.NewValueEntityTckModelEntity,
 		PersistenceID: "value-entity-tck-model",
 	}, protocol.DescriptorConfig{
 		Service: "tck_valueentity.proto",
 	})
 	if err != nil {
-		log.Fatalf("CloudState failed to register entity: %s", err)
+		log.Fatalf("Functions failed to register entity: %s", err)
 	}
 	err = server.RegisterValueEntity(&value.Entity{
-		ServiceName:   "cloudstate.tck.model.valueentity.ValueEntityTwo",
+		ServiceName:   "functions.tck.model.valueentity.ValueEntityTwo",
 		EntityFunc:    valueentity.NewValueEntityTckModelEntityTwo,
 		PersistenceID: "value-entity-tck-model-two",
 	}, protocol.DescriptorConfig{
 		Service: "tck_valueentity.proto",
 	})
 	if err != nil {
-		log.Fatalf("CloudState failed to register entity: %s", err)
+		log.Fatalf("Functions failed to register entity: %s", err)
 	}
 	err = server.RegisterValueEntity(
 		&value.Entity{
-			ServiceName:   "cloudstate.tck.model.valueentity.ValueEntityConfigured",
+			ServiceName:   "functions.tck.model.valueentity.ValueEntityConfigured",
 			EntityFunc:    valueentity.NewValueEntityConfiguredEntity,
 			PersistenceID: "value-entity-configured",
 		}, protocol.DescriptorConfig{
@@ -176,12 +176,12 @@ func main() {
 		}, value.WithPassivationStrategyTimeout(100*time.Millisecond),
 	)
 	if err != nil {
-		log.Fatalf("CloudState failed to register entity: %s", err)
+		log.Fatalf("Functions failed to register entity: %s", err)
 	}
 
 	// event log eventing
 	err = server.RegisterAction(&action.Entity{
-		ServiceName: "cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel",
+		ServiceName: "functions.tck.model.eventlogeventing.EventLogSubscriberModel",
 		EntityFunc: func() action.EntityHandler {
 			return &eventlogeventing.EventLogSubscriberModel{}
 		},
@@ -189,10 +189,10 @@ func main() {
 		Service: "eventlogeventing.proto",
 	})
 	if err != nil {
-		log.Fatalf("CloudState failed to register entity: %s", err)
+		log.Fatalf("Functions failed to register entity: %s", err)
 	}
 	err = server.RegisterEventSourced(&eventsourced.Entity{
-		ServiceName:   "cloudstate.tck.model.eventlogeventing.EventSourcedEntityOne",
+		ServiceName:   "functions.tck.model.eventlogeventing.EventSourcedEntityOne",
 		PersistenceID: "eventlogeventing-one",
 		EntityFunc: func(id eventsourced.EntityID) eventsourced.EntityHandler {
 			return &eventlogeventing.EventSourcedEntityOne{}
@@ -201,10 +201,10 @@ func main() {
 		Service: "eventlogeventing.proto",
 	})
 	if err != nil {
-		log.Fatalf("CloudState failed to register entity: %s", err)
+		log.Fatalf("Functions failed to register entity: %s", err)
 	}
 	err = server.RegisterEventSourced(&eventsourced.Entity{
-		ServiceName:   "cloudstate.tck.model.eventlogeventing.EventSourcedEntityTwo",
+		ServiceName:   "functions.tck.model.eventlogeventing.EventSourcedEntityTwo",
 		PersistenceID: "eventlogeventing-two",
 		EntityFunc: func(id eventsourced.EntityID) eventsourced.EntityHandler {
 			return &eventlogeventing.EventSourcedEntityTwo{}
@@ -213,7 +213,7 @@ func main() {
 		Service: "eventlogeventing.proto",
 	})
 	if err != nil {
-		log.Fatalf("CloudState failed to register entity: %s", err)
+		log.Fatalf("Functions failed to register entity: %s", err)
 	}
 
 	err = server.Run()

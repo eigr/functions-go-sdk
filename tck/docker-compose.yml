@@ -1,9 +1,7 @@
-networks:
-  some-net:
-    driver: bridge
 services:
+
   proxy:
-    image: gcr.io/eigr-io/cloudstate-proxy-core:latest
+    image: gcr.io/eigr-io/functions-proxy-core:latest
     environment:
       - USER_FUNCTION_HOST=tck
       - USER_FUNCTION_PORT=8090
@@ -11,36 +9,26 @@ services:
       - "-Dconfig.resource=dev-mode.conf"
       - "-Dcloudstate.proxy.passivation-timeout=30s"
     networks:
-      - some-net
-    #    network_mode:
-    #      bridge
+      - tcknet
     depends_on:
       - tck
+
   func:
     image: gcr.io/eigr-io/eigr-go-tck:latest
     networks:
-      - some-net
-  #    ports:
-  #      - "8080:8080"
-  #    expose:
-  #      - 8080
-  #    volumes:
-  #      - .:/code
-  #      - logvolume01:/var/log
-  #    links:
-  #      - redis
-  #  redis:
-  #    image: redis
-  #volumes:
-  #  logvolume01: {}
+      - tcknet
+
   tck:
-    image: gcr.io/eigr-io/cloudstate-tck:latest
+    image: gcr.io/eigr-io/functions-tck:latest
     environment:
-      #      - TCK_HOST=0.0.0.0
       - TCK_PORT=8090
       - TCK_PROXY_HOST=proxy
       - TCK_PROXY_PORT=9000
       - TCK_SERVICE_HOST=func
       - TCK_SERVICE_PORT=8080
     networks:
-      - some-net
+      - tcknet
+
+networks:
+  tcknet:
+    driver: bridge

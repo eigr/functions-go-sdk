@@ -10,12 +10,12 @@
 syntax = "proto3";
 
 import "google/protobuf/any.proto";
-import "cloudstate/entity_key.proto";
+import "functions/entity_key.proto";
 
 package crdt;
 
-option java_package = "io.cloudstate.tck.model";
-option go_package = "github.com/eigr/permastate-go/tck/proto/crdt;crdt";
+option java_package = "io.functions.tck.model";
+option go_package = "github.com/eigr/functions-go-sdk/tck/proto/crdt;crdt";
 
 service TckCrdt {
     rpc ProcessGCounter (GCounterRequest) returns (GCounterResponse);

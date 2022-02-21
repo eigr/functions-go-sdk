@@ -23,15 +23,15 @@
 syntax = "proto3";
 
 import "google/protobuf/empty.proto";
-import "cloudstate/entity_key.proto";
-import "cloudstate/eventing.proto";
+import "functions/entity_key.proto";
+import "functions/eventing.proto";
 import "google/api/annotations.proto";
 import "google/api/http.proto";
 import "google/api/httpbody.proto";
 
 package com.example.valueentity.shoppingcart;
 
-option go_package = "github.com/eigr/permastate-go/example/valueentity;valueentity";
+option go_package = "github.com/eigr/functions-go-sdk/example/valueentity;valueentity";
 
 message AddLineItem {
     string user_id = 1 [(.cloudstate.entity_key) = true];

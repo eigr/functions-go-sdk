@@ -16,7 +16,7 @@
 package eventsourced
 
 import (
-	_ "github.com/eigr/permastate-go/cloudstate"
+	_ "github.com/eigr/functions-go-sdk/functions"
 	proto "github.com/golang/protobuf/proto"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -262,7 +262,7 @@ func (x *Emit) GetValue() string {
 }
 
 //
-// Replace the response with a forward to `cloudstate.tck.model.EventSourcedTwo/Call`.
+// Replace the response with a forward to `functions.tck.model.EventSourcedTwo/Call`.
 // The payload must be a `Request` message with the given `id`.
 //
 type Forward struct {
@@ -313,7 +313,7 @@ func (x *Forward) GetId() string {
 }
 
 //
-// Add a side effect to the reply, to `cloudstate.tck.model.EventSourcedTwo/Call`.
+// Add a side effect to the reply, to `functions.tck.model.EventSourcedTwo/Call`.
 // The payload must be a `Request` message with the given `id`.
 // The side effect should be marked synchronous based on the given `synchronous` value.
 //
@@ -586,13 +586,14 @@ var file_eventsourced_proto_rawDesc = []byte{
 	0x1d, 0x2e, 0x63, 0x6c, 0x6f, 0x75, 0x64, 0x73, 0x74, 0x61, 0x74, 0x65, 0x2e, 0x74, 0x63, 0x6b,
 	0x2e, 0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1e,
 	0x2e, 0x63, 0x6c, 0x6f, 0x75, 0x64, 0x73, 0x74, 0x61, 0x74, 0x65, 0x2e, 0x74, 0x63, 0x6b, 0x2e,
-	0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x56,
+	0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x59,
 	0x0a, 0x17, 0x69, 0x6f, 0x2e, 0x63, 0x6c, 0x6f, 0x75, 0x64, 0x73, 0x74, 0x61, 0x74, 0x65, 0x2e,
-	0x74, 0x63, 0x6b, 0x2e, 0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x5a, 0x3b, 0x67, 0x69, 0x74, 0x68, 0x75,
-	0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x65, 0x69, 0x67, 0x72, 0x2f, 0x70, 0x65, 0x72, 0x6d, 0x61,
-	0x73, 0x74, 0x61, 0x74, 0x65, 0x2d, 0x67, 0x6f, 0x2f, 0x74, 0x63, 0x6b, 0x2f, 0x65, 0x76, 0x65,
-	0x6e, 0x74, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x64, 0x3b, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x73,
-	0x6f, 0x75, 0x72, 0x63, 0x65, 0x64, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x74, 0x63, 0x6b, 0x2e, 0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x5a, 0x3e, 0x67, 0x69, 0x74, 0x68, 0x75,
+	0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x65, 0x69, 0x67, 0x72, 0x2f, 0x66, 0x75, 0x6e, 0x63, 0x74,
+	0x69, 0x6f, 0x6e, 0x73, 0x2d, 0x67, 0x6f, 0x2d, 0x73, 0x64, 0x6b, 0x2f, 0x74, 0x63, 0x6b, 0x2f,
+	0x65, 0x76, 0x65, 0x6e, 0x74, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x64, 0x3b, 0x65, 0x76, 0x65,
+	0x6e, 0x74, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x64, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x33,
 }
 
 var (
@@ -609,27 +610,27 @@ func file_eventsourced_proto_rawDescGZIP() []byte {
 
 var file_eventsourced_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_eventsourced_proto_goTypes = []interface{}{
-	(*Request)(nil),       // 0: cloudstate.tck.model.Request
-	(*RequestAction)(nil), // 1: cloudstate.tck.model.RequestAction
-	(*Emit)(nil),          // 2: cloudstate.tck.model.Emit
-	(*Forward)(nil),       // 3: cloudstate.tck.model.Forward
-	(*Effect)(nil),        // 4: cloudstate.tck.model.Effect
-	(*Fail)(nil),          // 5: cloudstate.tck.model.Fail
-	(*Response)(nil),      // 6: cloudstate.tck.model.Response
-	(*Persisted)(nil),     // 7: cloudstate.tck.model.Persisted
+	(*Request)(nil),       // 0: functions.tck.model.Request
+	(*RequestAction)(nil), // 1: functions.tck.model.RequestAction
+	(*Emit)(nil),          // 2: functions.tck.model.Emit
+	(*Forward)(nil),       // 3: functions.tck.model.Forward
+	(*Effect)(nil),        // 4: functions.tck.model.Effect
+	(*Fail)(nil),          // 5: functions.tck.model.Fail
+	(*Response)(nil),      // 6: functions.tck.model.Response
+	(*Persisted)(nil),     // 7: functions.tck.model.Persisted
 }
 var file_eventsourced_proto_depIdxs = []int32{
-	1, // 0: cloudstate.tck.model.Request.actions:type_name -> cloudstate.tck.model.RequestAction
-	2, // 1: cloudstate.tck.model.RequestAction.emit:type_name -> cloudstate.tck.model.Emit
-	3, // 2: cloudstate.tck.model.RequestAction.forward:type_name -> cloudstate.tck.model.Forward
-	4, // 3: cloudstate.tck.model.RequestAction.effect:type_name -> cloudstate.tck.model.Effect
-	5, // 4: cloudstate.tck.model.RequestAction.fail:type_name -> cloudstate.tck.model.Fail
-	0, // 5: cloudstate.tck.model.EventSourcedTckModel.Process:input_type -> cloudstate.tck.model.Request
-	0, // 6: cloudstate.tck.model.EventSourcedTwo.Call:input_type -> cloudstate.tck.model.Request
-	0, // 7: cloudstate.tck.model.EventSourcedConfigured.Call:input_type -> cloudstate.tck.model.Request
-	6, // 8: cloudstate.tck.model.EventSourcedTckModel.Process:output_type -> cloudstate.tck.model.Response
-	6, // 9: cloudstate.tck.model.EventSourcedTwo.Call:output_type -> cloudstate.tck.model.Response
-	6, // 10: cloudstate.tck.model.EventSourcedConfigured.Call:output_type -> cloudstate.tck.model.Response
+	1, // 0: functions.tck.model.Request.actions:type_name -> functions.tck.model.RequestAction
+	2, // 1: functions.tck.model.RequestAction.emit:type_name -> functions.tck.model.Emit
+	3, // 2: functions.tck.model.RequestAction.forward:type_name -> functions.tck.model.Forward
+	4, // 3: functions.tck.model.RequestAction.effect:type_name -> functions.tck.model.Effect
+	5, // 4: functions.tck.model.RequestAction.fail:type_name -> functions.tck.model.Fail
+	0, // 5: functions.tck.model.EventSourcedTckModel.Process:input_type -> functions.tck.model.Request
+	0, // 6: functions.tck.model.EventSourcedTwo.Call:input_type -> functions.tck.model.Request
+	0, // 7: functions.tck.model.EventSourcedConfigured.Call:input_type -> functions.tck.model.Request
+	6, // 8: functions.tck.model.EventSourcedTckModel.Process:output_type -> functions.tck.model.Response
+	6, // 9: functions.tck.model.EventSourcedTwo.Call:output_type -> functions.tck.model.Response
+	6, // 10: functions.tck.model.EventSourcedConfigured.Call:output_type -> functions.tck.model.Response
 	8, // [8:11] is the sub-list for method output_type
 	5, // [5:8] is the sub-list for method input_type
 	5, // [5:5] is the sub-list for extension type_name

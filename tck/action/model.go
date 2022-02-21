@@ -19,9 +19,9 @@ package action
 import (
 	"errors"
 
-	"github.com/eigr/permastate-go/cloudstate/action"
-	"github.com/eigr/permastate-go/cloudstate/encoding"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/functions/action"
+	"github.com/eigr/functions-go-sdk/functions/encoding"
+	"github.com/eigr/functions-go-sdk/functions/protocol"
 	"github.com/golang/protobuf/proto"
 )
 
@@ -60,7 +60,7 @@ func (m *TestModel) HandleCommand(ctx *action.Context, name string, msg proto.Me
 						return err
 					}
 					ctx.Forward(&protocol.Forward{
-						ServiceName: "cloudstate.tck.model.action.ActionTwo",
+						ServiceName: "functions.tck.model.action.ActionTwo",
 						CommandName: "Call",
 						Payload:     payload,
 						Metadata:    ctx.Metadata(),
@@ -73,7 +73,7 @@ func (m *TestModel) HandleCommand(ctx *action.Context, name string, msg proto.Me
 						return err
 					}
 					ctx.SideEffect(&protocol.SideEffect{
-						ServiceName: "cloudstate.tck.model.action.ActionTwo",
+						ServiceName: "functions.tck.model.action.ActionTwo",
 						CommandName: "Call",
 						Payload:     payload,
 						Synchronous: s.Effect.GetSynchronous(),

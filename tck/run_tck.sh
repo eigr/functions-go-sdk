@@ -7,9 +7,9 @@ function rnd() {
 
 FUNC_IMAGE=${1:-gcr.io/eigr-io/eigr-go-tck:latest}
 FUNC="cloudstate-function-$(rnd)"
-PROXY_IMAGE=${2:-cloudstateio/cloudstate-proxy-core:latest}
+PROXY_IMAGE=${2:-cloudstateio/functions-proxy-core:latest}
 PROXY="cloudstate-proxy-$(rnd)"
-TCK_IMAGE=${3:-cloudstateio/cloudstate-tck:latest}
+TCK_IMAGE=${3:-cloudstateio/functions-tck:latest}
 TCK="cloudstate-tck-$(rnd)"
 
 finally() {
@@ -30,6 +30,6 @@ docker run -d --name "$PROXY" --net=host -e USER_FUNCTION_PORT=8090 "${PROXY_IMA
 docker run --rm --name $TCK --net=host "${TCK_IMAGE}"
 tck_status=$?
 if [ "$tck_status" -ne "0" ]; then
-  docker logs cloudstate-function
+  docker logs functions-function
 fi
 exit $tck_status

@@ -3,7 +3,7 @@ syntax = "proto3";
 package example.shoppingcart.domain;
 
 option java_package = "com.example";
-option go_package = "github.com/eigr/permastate-go/example/crdt_shoppingcart/domain;domain";
+option go_package = "github.com/eigr/functions-go-sdk/example/crdt_shoppingcart/domain;domain";
 
 message LineItem {
     string productId = 1;

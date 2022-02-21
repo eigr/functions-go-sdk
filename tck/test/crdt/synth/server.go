@@ -22,10 +22,10 @@ import (
 	"net"
 	"testing"
 
-	"github.com/eigr/permastate-go/cloudstate"
-	"github.com/eigr/permastate-go/cloudstate/crdt"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
-	crdt2 "github.com/eigr/permastate-go/tck/crdt"
+	"github.com/eigr/functions-go-sdk/functions"
+	"github.com/eigr/functions-go-sdk/functions/crdt"
+	"github.com/eigr/functions-go-sdk/functions/protocol"
+	crdt2 "github.com/eigr/functions-go-sdk/tck/crdt"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/test/bufconn"
 )
@@ -34,7 +34,7 @@ const serviceName = "crdt.TckCrdt"
 
 type server struct {
 	t              *testing.T
-	server         *cloudstate.CloudState
+	server         *functions.Functions
 	conn           *grpc.ClientConn
 	lis            *bufconn.Listener
 	teardownServer func()
@@ -47,8 +47,8 @@ func newServer(t *testing.T) *server {
 	if s.t == nil {
 		panic("not test context defined")
 	}
-	server, err := cloudstate.New(protocol.Config{
-		ServiceName:    "io.cloudstate.tck.Crdt", // the service name the proxy gets to know about
+	server, err := functions.New(protocol.Config{
+		ServiceName:    "io.functions.tck.Crdt", // the service name the proxy gets to know about
 		ServiceVersion: "0.2.0",
 	})
 	if err != nil {

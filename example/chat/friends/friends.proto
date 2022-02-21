@@ -18,11 +18,11 @@
 
 syntax = "proto3";
 
-import "cloudstate/entity_key.proto";
+import "functions/entity_key.proto";
 
 package cloudstate.samples.chat.friends;
 
-option go_package = "github.com/eigr/permastate-go/example/chat/friends;friends";
+option go_package = "github.com/eigr/functions-go-sdk/example/chat/friends;friends";
 
 message Friend {
     string user = 1;

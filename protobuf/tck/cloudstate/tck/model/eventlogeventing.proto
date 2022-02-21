@@ -11,13 +11,13 @@ syntax = "proto3";
 
 package cloudstate.tck.model.eventlogeventing;
 
-option java_package = "io.cloudstate.tck.model";
-option go_package = "github.com/eigr/permastate-go/tck/eventlogeventing;eventlogeventing";
+option java_package = "io.functions.tck.model";
+option go_package = "github.com/eigr/functions-go-sdk/tck/eventlogeventing;eventlogeventing";
 
 import "google/protobuf/any.proto";
 import "google/protobuf/empty.proto";
-import "cloudstate/eventing.proto";
-import "cloudstate/entity_key.proto";
+import "functions/eventing.proto";
+import "functions/entity_key.proto";
 
 //
 // The `EventLogSubscriberModel` service is an Action that should be implemented in the following ways:

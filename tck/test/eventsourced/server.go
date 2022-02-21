@@ -6,17 +6,17 @@ import (
 	"net"
 	"testing"
 
-	"github.com/eigr/permastate-go/cloudstate"
-	"github.com/eigr/permastate-go/cloudstate/eventsourced"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
-	shoppingcart2 "github.com/eigr/permastate-go/example/shoppingcart"
+	"github.com/eigr/functions-go-sdk/functions"
+	"github.com/eigr/functions-go-sdk/functions/eventsourced"
+	"github.com/eigr/functions-go-sdk/functions/protocol"
+	shoppingcart2 "github.com/eigr/functions-go-sdk/example/shoppingcart"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/test/bufconn"
 )
 
 type server struct {
 	t              *testing.T
-	server         *cloudstate.CloudState
+	server         *functions.Functions
 	conn           *grpc.ClientConn
 	lis            *bufconn.Listener
 	teardownServer func()
@@ -31,7 +31,7 @@ func newServer(t *testing.T) *server {
 		panic("not test context defined")
 	}
 	s.t.Helper()
-	server, err := cloudstate.New(protocol.Config{
+	server, err := functions.New(protocol.Config{
 		ServiceName:    "shopping-cart",
 		ServiceVersion: "9.9.8",
 	})

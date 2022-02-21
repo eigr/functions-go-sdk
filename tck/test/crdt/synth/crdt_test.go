@@ -24,12 +24,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/eigr/permastate-go/cloudstate/protocol"
-	"github.com/eigr/permastate-go/example/crdt_shoppingcart/shoppingcart"
+	"github.com/eigr/functions-go-sdk/example/crdt_shoppingcart/shoppingcart"
+	"github.com/eigr/functions-go-sdk/functions/protocol"
 )
 
 // TestCRDT runs the TCK for the CRDT state model.
-// As defined by the Cloudstate specification, each CRDT state model type
+// As defined by the Eigr Functions specification, each CRDT state model type
 // has three state actions CRDTs can emit on state changes.
 // - create
 // - update

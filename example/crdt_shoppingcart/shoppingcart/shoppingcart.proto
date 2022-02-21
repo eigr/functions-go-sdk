@@ -1,12 +1,12 @@
 syntax = "proto3";
 
 import "google/protobuf/empty.proto";
-import "cloudstate/entity_key.proto";
+import "functions/entity_key.proto";
 
 package example.shoppingcart;
 
 option java_package = "com.example";
-option go_package = "github.com/eigr/permastate-go/example/crdt_shoppingcart/shoppingcart;shoppingcart";
+option go_package = "github.com/eigr/functions-go-sdk/example/crdt_shoppingcart/shoppingcart;shoppingcart";
 
 service ShoppingCartService {
     rpc AddItem (AddLineItem) returns (google.protobuf.Empty);

@@ -12,10 +12,10 @@ package cloudstate.valueentity;
 // Any is used so that domain events defined according to the functions business domain can be embedded inside
 // the protocol.
 import "google/protobuf/any.proto";
-import "cloudstate/entity.proto";
+import "functions/entity.proto";
 
-option java_package = "io.cloudstate.protocol";
-option go_package = "github.com/eigr/permastate-go/cloudstate/entity;entity";
+option java_package = "io.functions.protocol";
+option go_package = "github.com/eigr/functions-go-sdk/functions/entity;entity";
 
 // The Value Entity service
 service ValueEntity {

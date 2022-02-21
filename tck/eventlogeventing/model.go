@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/eigr/permastate-go/cloudstate/action"
-	"github.com/eigr/permastate-go/cloudstate/encoding"
-	"github.com/eigr/permastate-go/cloudstate/eventsourced"
-	"github.com/eigr/permastate-go/cloudstate/protocol"
+	"github.com/eigr/functions-go-sdk/functions/action"
+	"github.com/eigr/functions-go-sdk/functions/encoding"
+	"github.com/eigr/functions-go-sdk/functions/eventsourced"
+	"github.com/eigr/functions-go-sdk/functions/protocol"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes/any"
 	"github.com/golang/protobuf/ptypes/empty"
@@ -95,7 +95,7 @@ func convert(ctx *action.Context, metadata *protocol.Metadata, step *ProcessStep
 			return err
 		}
 		ctx.Forward(&protocol.Forward{
-			ServiceName: "cloudstate.tck.model.eventlogeventing.EventLogSubscriberModel",
+			ServiceName: "functions.tck.model.eventlogeventing.EventLogSubscriberModel",
 			CommandName: "Effect",
 			Payload:     payload,
 			Metadata:    ctx.Metadata(),
