@@ -1,4 +1,4 @@
-# eigr/functions support for Go
+# Eigr Functions SDK for Go
 
 [![GitHub Actions](https://github.com/eigr/functions-go-sdk/actions/workflows/github-actions.yml/badge.svg)](https://github.com/eigr/functions-go-sdk/actions/workflows/github-actions.yml)
 
